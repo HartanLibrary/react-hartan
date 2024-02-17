@@ -1,0 +1,122 @@
+/* Navbar CSS Module */
+
+/* Header styles */
+header {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 2rem 0;
+    background-color: #f5f5f5;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+}
+
+/* All Button styles  */
+button {
+    outline: none;
+    border: none;
+    background: transparent;
+}
+
+/* Open Menu Button Style */
+.openMenuBtn {
+    display: none;
+    cursor: pointer;
+}
+
+/* Close Menu Button Style */
+.closeMenuBtn {
+    display: none;
+    cursor: pointer;
+}
+
+/* Hartan Logo Styling */
+.logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.4rem;
+
+    img {
+        height: 3rem;
+        border-radius: 50%;
+    }
+
+    span {
+        font-size: 1.75rem;
+        font-weight: 600;
+    }
+}
+
+/* NavLinks Style */
+nav ul {
+    text-decoration: none;
+    list-style: none;
+    display: flex;
+    gap: 2rem;
+
+    li {
+        cursor: pointer;
+        font-size: 1.75rem;
+        font-weight: 600;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        
+        a{
+            text-decoration: none;
+            color: black;
+        }
+    }
+
+    li:hover {
+        color: #1e90ff;
+        border-bottom: 0.2rem solid #1e90ff;
+    }
+}
+
+/* For Responsiveness */
+@media (max-width: 1024px) {
+
+    .navbar {
+        display: none;
+    }
+
+    .openMenuBtn {
+        display: block;
+    }
+
+    .closeMenuBtn {
+        display: block;
+        margin-left: 1rem;
+    }
+
+    /* Sidebar styles */
+    .sidebar {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        background-color: rgb(245, 245, 245);
+        box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+        min-height: 100vh;
+        padding: 3rem 1rem;
+        width: 25%;
+
+
+        ul {
+            flex-direction: column;
+            padding: 3rem 0 0 3rem;
+            align-items: start;
+        }
+
+        li:hover {
+            border-bottom: none;
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .sidebar {
+        width: 50%;
+    }
+}

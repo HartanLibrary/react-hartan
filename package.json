@@ -1,0 +1,24 @@
+{
+  "name": "react-hartan-js",
+  "version": "1.0.0",
+  "description": "A simple components library for React",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "hartan",
+    "react",
+    "components",
+    "library",
+    "npm",
+    "package"
+  ],
+  "author": "Akkshay Tandon & Hardik Singh",
+  "license": "MIT License",
+  "dependencies": {
+    "prop-types": "^15.8.1",
+    "react": "^18.2.0",
+    "react-router-dom": "^6.22.0"
+  }
+}
