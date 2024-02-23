@@ -1,0 +1,62 @@
+.team{
+    display: flex;
+    flex-direction: column;
+    gap: 5rem;
+    justify-content: center;
+    align-items: center;
+
+    .teamDetailsCaption{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 1rem;
+
+        h1{
+            font-size: 3rem;
+        }
+
+        p{
+            font-size: 1.5rem;
+            color: #484747;
+            font-weight: 500;
+        }
+    }
+
+    .teamMembers{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 2rem;
+
+        .teamMemberCard{
+            width: 35rem;
+            padding: 1rem;
+            border: 2px solid #e8e4e4;
+            border-radius: .5rem;
+            display: flex;
+            justify-content: start;
+            gap: 2.5rem;
+            align-items: center;
+
+            figure{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                img{
+                    border-radius: 50%;
+                }
+            }
+            .teamMemberName{
+                font-size: 2rem;
+                font-weight: 500;
+            }
+            .teamMemberPosition{
+                font-size: 1.75rem;
+                font-weight: 500;
+                color: #565454;
+            }
+        }
+    }
+}

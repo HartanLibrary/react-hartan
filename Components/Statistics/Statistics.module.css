@@ -1,0 +1,77 @@
+.statistics {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 5rem;
+    padding: 1rem 5rem;
+
+    .abtStats {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: start;
+        gap: 5rem;
+
+        div {
+            h1 {
+                font-size: 3rem;
+            }
+
+            p {
+                font-size: 1.3rem;
+                font-weight: 500;
+                color: #6b6868;
+            }
+        }
+    }
+
+    .statsBlocks {
+        display: flex;
+        justify-content: space-around;
+        gap: 1rem;
+        flex-wrap: wrap;
+        width: 100%;
+
+        div {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+
+            h2 {
+                font-size: 2rem;
+            }
+        }
+    }
+
+}
+
+@media (max-width:1024px) {
+    .statistics {
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 768px){
+    .statistics{
+        .abtStats{
+            flex-direction: column;
+        }
+
+        figure{
+            img{
+                height: 20rem;
+            }
+        }
+    }
+}
+
+@media (max-width: 460px){
+    .statistics{
+        figure{
+            img{
+                height: 10rem;
+            }
+        }
+    }
+}

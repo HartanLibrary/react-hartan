@@ -1,0 +1,53 @@
+.dropdown {
+    width: 16rem;
+
+    button {
+        background-color: #1e90ff;
+        padding: .75rem 1.25rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        border-radius: .5rem;
+        width: 100%;
+        font-size: 1.5rem;
+        font-weight: 600;
+        cursor: pointer;
+        border: 2px solid transparent;
+
+        span {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+        }
+    }
+
+    .button::after {
+        border: 2px solid black;
+        color: white;
+    }
+
+    ul {
+        background-color: #1e90ff;
+        margin-top: .5rem;
+        border-radius: .5rem;
+
+
+        li {
+            list-style: none;
+            padding: .75rem 1rem;
+
+            span {
+                text-decoration: none;
+                color: #000000;
+                font-weight: 500;
+                font-size: 1.5rem;
+                transition: .1s;
+            }
+
+            a:hover {
+                color: white;
+            }
+        }
+    }
+}

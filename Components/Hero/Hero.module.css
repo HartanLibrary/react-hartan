@@ -1,0 +1,39 @@
+/* Hero Section CSS Module */
+
+.heroSection{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10rem;
+    gap: 5rem;
+}
+
+.heroSectionAbout{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+    gap: 3rem;
+
+    h1{
+        font-size: 4rem;
+    }
+    p{
+        font-size: 1.5rem
+    }
+}
+
+.heroImage{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    img{
+        height: 30rem;
+    }
+}
+
+@media (max-width: 1024px){
+    .heroSection{
+        flex-direction: column;
+    }
+}
