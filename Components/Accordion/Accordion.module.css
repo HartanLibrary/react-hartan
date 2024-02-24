@@ -1,44 +1,42 @@
-.accordion {
+.accordionBox {
+    background-color: #1e90ff;
+    margin: .5rem 0;
+    padding: 1rem 2rem;
+    border-radius: .75rem;
+    width: 50rem;
+}
 
-    .accordionBox {
-        background-color: #1e90ff;
-        margin: .5rem 0;
-        padding: 1rem 2rem;
-        border-radius: .75rem;
-        width: 50rem;
+.accordionTitle {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
 
-        .accordionTitle {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            cursor: pointer;
+}
 
-            .accordionQues {
-                font-size: 2rem;
-                font-weight: 500;
-            }
+.accordionQues {
+    font-size: 2rem;
+    font-weight: 500;
+}
 
-            .accordionSign {
-                font-size: 2.5rem;
-                font-weight: 500;
-            }
-        }
+.accordionSign {
+    font-size: 2.5rem;
+    font-weight: 500;
+}
 
-        .accordionContentHide {
-            font-size: 1.25rem;
-            font-weight: 500;
-            color: #ffffff;
-            overflow: hidden;
-            max-height: 0;
-            transition: all .5s cubic-bezier(0, 1, 0, 1);
-        }
+.accordionContentHide {
+    font-size: 1.25rem;
+    font-weight: 500;
+    color: #ffffff;
+    overflow: hidden;
+    max-height: 0;
+    transition: all .5s cubic-bezier(0, 1, 0, 1);
+}
 
-        .accordionContentHide.accordionContentShow {
-            height: auto;
-            max-height: 999px;
-            transition: all .5s cubic-bezier(1, 0, 1, 0);
-        }
-    }
+.accordionContentHide.accordionContentShow {
+    height: auto;
+    max-height: 999px;
+    transition: all .5s cubic-bezier(1, 0, 1, 0);
 }
 
 @media (max-width: 768px) {

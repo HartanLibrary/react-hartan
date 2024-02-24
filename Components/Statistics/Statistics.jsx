@@ -20,7 +20,7 @@ const list = [
     },
 ];
 
-export default function Statistics({ statsBlockData = list, statisticsHeading = "Hartan", statisticsHeadingAbt = "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Praesentium libero architecto ipsum nostrum impedit similique neque mollitia dolores quasi autem cum ea, quas aspernatur? Deserunt.", imgSrc = "https://dummyimage.com/500x250", userStatisticsStyle, userAbtStatsStyle, userStatsBlocksStyle }) {
+export default function Statistics({ statsBlockData = list, statisticsHeading = "Hartan", statisticsHeadingAbt = "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Praesentium libero architecto ipsum nostrum impedit similique neque mollitia dolores quasi autem cum ea, quas aspernatur? Deserunt.", imgSrc = "https://dummyimage.com/500x250", userStatisticsStyle, userAbtStatsStyle, userStatsBlocksStyle, imgState = true }) {
 
     return (
         <section className={`${statisticsStyle.statistics} ${userStatisticsStyle}`}>
@@ -42,10 +42,12 @@ export default function Statistics({ statsBlockData = list, statisticsHeading = 
                     }
                 </div>
             </div>
-
-            <figure>
-                <img src={imgSrc} alt="Hartan" />
-            </figure>
+            {
+                imgState &&
+                <figure>
+                    <img src={imgSrc} alt="Hartan" />
+                </figure>
+            }
 
         </section>
     )

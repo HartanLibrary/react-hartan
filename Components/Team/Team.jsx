@@ -41,26 +41,6 @@ const list = [
         memberImg: "https://dummyimage.com/75x75",
         memberName: "Hartan",
         memberPosition: "UI/UX Designer"
-    },
-    {
-        memberImg: "https://dummyimage.com/75x75",
-        memberName: "Hartan",
-        memberPosition: "UI/UX Designer"
-    },
-    {
-        memberImg: "https://dummyimage.com/75x75",
-        memberName: "Hartan",
-        memberPosition: "UI/UX Designer"
-    },
-    {
-        memberImg: "https://dummyimage.com/75x75",
-        memberName: "Hartan",
-        memberPosition: "UI/UX Designer"
-    },
-    {
-        memberImg: "https://dummyimage.com/75x75",
-        memberName: "Hartan",
-        memberPosition: "UI/UX Designer"
     }
 ];
 

@@ -1,4 +1,4 @@
-.testimonial{
+.testimonial {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -7,22 +7,23 @@
     border-radius: .5rem;
     background-color: rgb(243, 238, 238);
     padding: 1rem;
+}
 
-    .review{
-        font-size: 1.6rem;
-        font-weight: 500;
-    }
-    
-    .reviewerName{
-        border-top: 2px solid rgb(46, 46, 46);
-        padding-top: 1rem;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        p{
-            font-size: 1.25rem;
-            font-weight: 500;
-        }
-    }
+.review {
+    font-size: 1.6rem;
+    font-weight: 500;
+}
+
+.reviewerName {
+    border-top: 2px solid rgb(46, 46, 46);
+    padding-top: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.reviewerName p {
+    font-size: 1.25rem;
+    font-weight: 500;
 }

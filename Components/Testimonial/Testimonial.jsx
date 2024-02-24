@@ -1,7 +1,9 @@
 import testimonialStyle from "./Testimonial.module.css"
 import PropTypes from "prop-types"
 
-export default function Testimonial({ review = "Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint molestiae culpa nulla minus consequuntur voluptatem ad, facilis pariatur, cupiditate quas atque maxime quo a praesentium.", reviewerName = "Hartan", reviewerPosition = "UI/UX Designer", userTestimonialStyle, userReviewStyle, userReviewerStyle }) {
+const userreview="Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint molestiae culpa nulla minus consequuntur voluptatem ad, facilis pariatur, cupiditate quas atque maxime quo a praesentium."
+
+export default function Testimonial({ review=userreview, reviewerName = "Hartan", reviewerPosition = "UI/UX Designer", userTestimonialStyle, userReviewStyle, userReviewerStyle }) {
     
     return (
         <section className={`${testimonialStyle.testimonial} ${userTestimonialStyle}`}>

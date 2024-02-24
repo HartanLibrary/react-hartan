@@ -1,51 +1,45 @@
-
-.popup {
-
-    .popupContent {
-        position: fixed;
-        inset: 0;
-        background-color: rgba(0, 0, 0, 0.75);
-        backdrop-filter: blur(.5rem);
-        display: flex;
-        justify-content: center;
-
-        .popupContentBox {
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            padding: 2rem 5rem;
-
-            button {
-                color: #ffffff;
-                font-size: 3rem;
-                place-self: end;
-                cursor: pointer;
-            }
-
-            .popupContentBoxMaterial {
-                background-color: #1e90ff;
-                padding: 2rem 4rem;
-                display: flex;
-                flex-direction: column;
-                gap: 3rem;
-                border-radius: .5rem;
-
-                h1 {
-                    font-size: 3rem;
-                }
-
-                p {
-                    font-size: 1.5rem;
-                    font-weight: 500;
-                }
-
-                span {
-                    place-self: end;
-                    font-size: 2rem;
-                    font-weight: 500;
-                }
-            }
-        }
-    }
+.popupContent {
+    position: fixed;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.75);
+    backdrop-filter: blur(.5rem);
+    display: flex;
+    justify-content: center;
 }
+
+.popupContentBox {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem 5rem;
+}
+
+.popupContentBox .cancelBtn {
+    place-self: end;
+    cursor: pointer;
+}
+
+
+.popupContentBoxMaterial {
+    background-color: #1e90ff;
+    padding: 2rem 4rem;
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    border-radius: .5rem;
+}
+
+.popupContentBoxMaterial h1 {
+    font-size: 3rem;
+}
+
+.popupContentBoxMaterial p {
+    font-size: 1.5rem;
+    font-weight: 500;
+}
+
+.popupContentBoxMaterial button{
+    place-self: center;
+}
+

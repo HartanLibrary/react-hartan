@@ -2,7 +2,10 @@ import Button from "../Button/Button"
 import heroSectionStyles from "./Hero.module.css"
 import PropTypes from "prop-types"
 
-export default function HeroSection({ heroHeadName = "Hartan Component Library", heroAbout = "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dicta placeat labore cupiditate laudantium atque totam architecto, aliquid, dolores numquam vel odit voluptates beatae quo voluptatum autem voluptate eos facilis tempora culpa, perferendis explicabo minima sunt unde? Natus tempora consectetur unde.", userHeroSectionStyle, userHeroAboutStyle, userButtonStyle, imgSrc = "https://dummyimage.com/720x600" }) {
+const abt = "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dicta placeat labore cupiditate laudantium atque totam architecto, aliquid, dolores numquam vel odit voluptates beatae quo voluptatum autem voluptate eos facilis tempora culpa, perferendis explicabo minima sunt unde? Natus tempora consectetur unde."
+
+
+export default function HeroSection({ heroHeadName = "Hartan Component Library", heroAbout = abt, userHeroSectionStyle, userHeroAboutStyle, userButtonStyle, imgSrc = "https://dummyimage.com/720x600", imgState = true }) {
 
     return (
         <section className={`${heroSectionStyles.heroSection} ${userHeroSectionStyle}`}>
@@ -12,9 +15,12 @@ export default function HeroSection({ heroHeadName = "Hartan Component Library",
                 <Button buttonStyle={`${userButtonStyle}`} />
             </div>
 
-            <figure className={`${heroSectionStyles.heroImage}`}>
-                <img src={imgSrc} alt="Hartan" />
-            </figure>
+            {
+                imgState &&
+                <figure className={`${heroSectionStyles.heroImage}`}>
+                    <img src={imgSrc} alt="Hartan" />
+                </figure>
+            }
         </section>
     )
 }
