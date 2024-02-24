@@ -1,7 +1,7 @@
 /* Navbar CSS Module */
 
 /* Header styles */
-header {
+.headerStyle {
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -35,16 +35,16 @@ button {
     justify-content: center;
     align-items: center;
     gap: 0.4rem;
+}
 
-    img {
-        height: 3rem;
-        border-radius: 50%;
-    }
+.logo img {
+    height: 3rem;
+    border-radius: 50%;
+}
 
-    span {
-        font-size: 1.75rem;
-        font-weight: 600;
-    }
+.logo span {
+    font-size: 1.75rem;
+    font-weight: 600;
 }
 
 /* NavLinks Style */
@@ -53,25 +53,25 @@ nav ul {
     list-style: none;
     display: flex;
     gap: 2rem;
+}
 
-    li {
-        cursor: pointer;
-        font-size: 1.75rem;
-        font-weight: 600;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        
-        a{
-            text-decoration: none;
-            color: black;
-        }
-    }
+nav ul li {
+    cursor: pointer;
+    font-size: 1.75rem;
+    font-weight: 600;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
-    li:hover {
-        color: #1e90ff;
-        border-bottom: 0.2rem solid #1e90ff;
-    }
+nav ul li a {
+    text-decoration: none;
+    color: black;
+}
+
+nav ul li:hover {
+    color: #1e90ff;
+    border-bottom: 0.2rem solid #1e90ff;
 }
 
 /* For Responsiveness */
@@ -102,16 +102,16 @@ nav ul {
         padding: 3rem 1rem;
         width: 25%;
 
+    }
 
-        ul {
-            flex-direction: column;
-            padding: 3rem 0 0 3rem;
-            align-items: start;
-        }
+    .sidebar ul {
+        flex-direction: column;
+        padding: 3rem 0 0 3rem;
+        align-items: start;
+    }
 
-        li:hover {
-            border-bottom: none;
-        }
+    .sidebar ul li:hover {
+        border-bottom: none;
     }
 }
 

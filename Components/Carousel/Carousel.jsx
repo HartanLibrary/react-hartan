@@ -3,11 +3,11 @@ import carouselStyle from "./Carousel.module.css"
 import PropTypes from "prop-types"
 
 const imageList = [
-    "https://dummyimage.com/600x300",
     "https://dummyimage.com/601x300",
     "https://dummyimage.com/602x300",
     "https://dummyimage.com/603x300",
-    "https://dummyimage.com/604x300"
+    "https://dummyimage.com/604x300",
+    "https://dummyimage.com/605x300",
 ];
 
 export default function Carousel({ images = imageList }) {
@@ -24,7 +24,7 @@ export default function Carousel({ images = imageList }) {
                 {
                     images.map((image, index) => {
                         return (
-                            <figure key={index} className={`${carouselStyle.slides}`} style={{ display: currentSlide === index ? "block" : "none", animation: currentSlide === index ? "" : "slideLeft 1s" }}>
+                            <figure key={index} className={`${carouselStyle.slides}`} style={{ display: currentSlide === index ? "block" : "none" }}>
                                 <img src={image} alt={`Slide ${index + 1}`} />
                             </figure>
                         )

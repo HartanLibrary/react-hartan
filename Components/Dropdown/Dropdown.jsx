@@ -9,13 +9,13 @@ const list = [
     "Services"
 ];
 
-export default function Dropdown({ listItem = list, btnTxt = "Dropdown", userDropdownStyle, userButtonStyle }) {
+export default function Dropdown({ listItem = list, btnTxt = "Dropdown", userDropdownStyle, userDropdownList,userButtonStyle,userDropdownListItem }) {
 
     const [isOpen, setIsOpen] = useState(false);
 
     return (
         <section className={`${dropdownStyle.dropdown} ${userDropdownStyle}`}>
-            <button className={` ${userButtonStyle}`} onClick={() => setIsOpen((prev) => !prev)}>{btnTxt}
+            <button className={`${dropdownStyle.dropdownBtn} ${userButtonStyle}`} onClick={() => setIsOpen((prev) => !prev)}>{btnTxt}
                 {
                     isOpen ? (
                         <span>
@@ -29,11 +29,11 @@ export default function Dropdown({ listItem = list, btnTxt = "Dropdown", userDro
                         )
                 }
             </button>
-            <ul>
+            <ul className={`${dropdownStyle.dropdownList} ${userDropdownList}`}>
                 {
                     isOpen && (
                         listItem.map((listText, id) => {
-                            return <li key={id} onClick={() => setIsOpen((prev)=>!prev)}><span>{listText}</span></li>
+                            return <li className={`${dropdownStyle.dropdownListItem} ${userDropdownListItem}`} key={id} onClick={() => setIsOpen((prev)=>!prev)}><span>{listText}</span></li>
                         })
                     )
                 }
@@ -46,5 +46,7 @@ Dropdown.propTypes = {
     listItem: PropTypes.arrayOf(PropTypes.string),
     btnTxt: PropTypes.string,
     userDropdownStyle: PropTypes.string,
-    userButtonStyle: PropTypes.string
+    userButtonStyle: PropTypes.string,
+    userDropdownList:PropTypes.string,
+    userDropdownListItem:PropTypes.string
 };
