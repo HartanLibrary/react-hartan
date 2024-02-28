@@ -2,7 +2,6 @@ import navbarStyles from "./Navbar.module.css"
 import useSidebar from "../../Hooks/Sidebar"
 import Button from "../Button/Button"
 import PropTypes from "prop-types"
-import "../index.css"
 
 
 const list = [
@@ -33,12 +32,12 @@ const states = {
     buttonState: true,
 };
 
-export default function Navbar({ navList = list, logoImgSrc = "https://dummyimage.com/374x416", logoName = "Hartan", userHeaderStyle, userSideBarStyle, userNavListStyle, userLogoStyle, userButtonStyle, buttonText = "Light / Dark", statesObj = states }) {
+export default function Navbar({ navList = list, statesObj = states, onClickFunction, buttonText = "Light / Dark", logoImgSrc = "https://dummyimage.com/374x416", logoName = "Hartan", userHeaderStyle, userSideBarStyle, userNavListStyle, userNavListItemStyle, userLogoStyle, userButtonStyle }) {
 
     const [sidebarStatus, openSidebar, closeSidebar] = useSidebar(false);
 
     return (
-        <header className={`${navbarStyles.headerStyle} ${userHeaderStyle} `}>
+        <header className={`${navbarStyles.headerStyle} ${userHeaderStyle}`}>
             <button className={`${navbarStyles.openMenuBtn} `} onClick={openSidebar}>
                 <svg xmlns="http://www.w3.org/2000/svg" height="20" width="17.5" viewBox="0 0 448 512"><path d="M0 96C0 78.3 14.3 64 32 64H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32H32c-17.7 0-32-14.3-32-32s14.3-32 32-32H416c17.7 0 32 14.3 32 32z" /></svg>
             </button>
@@ -46,8 +45,8 @@ export default function Navbar({ navList = list, logoImgSrc = "https://dummyimag
             {
                 statesObj.logo.full && (
                     <div className={`${navbarStyles.logo} ${userLogoStyle}`}>
-                       { statesObj.logo.img && <img src={logoImgSrc} alt="hartan-logo" /> }
-                       { statesObj.logo.name && <span>{logoName}</span> }
+                        {statesObj.logo.img && <img src={logoImgSrc} alt="hartan-logo" />}
+                        {statesObj.logo.name && <span>{logoName}</span>}
                     </div>
                 )
             }
@@ -63,7 +62,7 @@ export default function Navbar({ navList = list, logoImgSrc = "https://dummyimag
                             <ul>
                                 {
                                     navList?.map((listItem, id) => {
-                                        return <li key={id} onClick={closeSidebar} className={`${userNavListStyle}`}>
+                                        return <li key={id} onClick={closeSidebar} className={`${userNavListItemStyle}`}>
                                             <a href={listItem.href}>{listItem.text}</a>
                                         </li>
                                     })
@@ -71,11 +70,11 @@ export default function Navbar({ navList = list, logoImgSrc = "https://dummyimag
                             </ul>
                         </nav>
                     ) : (
-                        <nav className={`${navbarStyles.navbar}`}>
+                        <nav className={`${navbarStyles.navbar} ${userNavListStyle}`}>
                             <ul>
                                 {
                                     navList?.map((listItem, id) => {
-                                        return <li key={id} className={`${userNavListStyle}`}><a href={listItem.href}>{listItem.text}</a></li>
+                                        return <li key={id} className={`${userNavListItemStyle}`}><a href={listItem.href}>{listItem.text}</a></li>
                                     })
                                 }
                             </ul>
@@ -85,7 +84,7 @@ export default function Navbar({ navList = list, logoImgSrc = "https://dummyimag
 
             {
                 statesObj.buttonState &&
-                <Button buttonStyle={`${userButtonStyle}`} buttonText={buttonText}></Button>
+                <Button buttonStyle={`${userButtonStyle}`} buttonText={buttonText} onClickFunction={onClickFunction}></Button>
             }
         </header>
     )
@@ -100,9 +99,10 @@ Navbar.propTypes = {
     imgSrc: PropTypes.string,
     logoName: PropTypes.string,
     buttonText: PropTypes.string,
+    onClickFunction: PropTypes.func,
     statesObj: PropTypes.shape({
         logo: PropTypes.shape({
-            full: PropTypes.bool, 
+            full: PropTypes.bool,
             img: PropTypes.bool,
             name: PropTypes.bool
         }),
@@ -110,7 +110,8 @@ Navbar.propTypes = {
     }),
     userHeaderStyle: PropTypes.string,
     userSideBarStyle: PropTypes.string,
-    userNavListStyle: PropTypes.string, 
+    userNavListStyle: PropTypes.string,
+    userNavListItemStyle: PropTypes.string,
     userLogoStyle: PropTypes.string,
     userButtonStyle: PropTypes.string
 };

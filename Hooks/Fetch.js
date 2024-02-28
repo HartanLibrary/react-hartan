@@ -1,31 +1,54 @@
-import { useState } from "react";
 
-export default function useFetch(userUrl, method){
-    const [response, setResponse] = useState("");
-    const [result, setResult] = useState("");
-    const [responseStatus, setResponseStatus] = useState("");
+export default function useFetch(){
 
-    const getData = async (url) => {
-        const res = await fetch(`${url}`);
-        const rslt = await res.json();
-        const rs = res.status;
-
-        setResponse(res);
-        setResult(rslt);
-        setResponseStatus(rs);
-    }
-
-    const postData = async (url) => {
-        
-    }
-
-    if(method.toLowerCase() === "get"){
-        getData(userUrl);
-    } else if(method.toLowerCase() === "post"){
-        postData(userUrl);
-    } else{
-        return "Method Does Not Exists";
-    }
+async function getData(url) {
+    const res = await fetch(`${url}`);
+    const result = await res.json();
+    const responseStatus = res.status;
 
     return [result, responseStatus];
+}
+
+async function postData(url, data) {
+    const res = await fetch(`${url}`, {
+    method: "POST",
+    body: JSON.stringify(data),
+    headers: {
+        "Content-type": "application/json; charset=UTF-8"
+        }
+    });
+
+    const result = await res.json();
+    const responseStatus = res.status;
+
+    return [result, responseStatus];
+}
+
+async function updateData(url, data) {
+    const res = await fetch(`${url}`, {
+        method: "PUT",
+        body: JSON.stringify(data),
+        headers: {
+            "Content-type": "application/json; charset=UTF-8"
+        }
+    });
+
+    const result = await res.json();
+    const responseStatus = res.status;
+
+    return [result, responseStatus];
+}
+
+async function deleteData(url) {
+    const res = await fetch(`${url}`, {
+        method: "DELETE"
+    });
+
+    const result = await res.json();
+    const responseStatus = res.status;
+
+    return [result, responseStatus];
+}
+
+    return [getData, postData, updateData, deleteData];
 }

@@ -2,6 +2,7 @@
     width: 16rem;
 }
 
+/* Opening/Closing Dropdown button */
 .dropdownBtn {
     background-color: #1e90ff;
     padding: .75rem 1.25rem;
@@ -16,6 +17,7 @@
     border: 2px solid transparent;
 }
 
+/* dropdown icon change on open/close */
 .dropdownBtn span {
     display: flex;
     justify-content: center;
@@ -23,19 +25,21 @@
 
 }
 
-
+/* dropdown list container */
 .dropdownList {
     background-color: #1e90ff;
     margin-top: .5rem;
     border-radius: .5rem;
 }
 
-
+/* each item inside the dropdown list container */
 .dropdownListItem {
     list-style: none;
     padding: .75rem 1rem;
+    cursor: pointer;
 }
 
+/* span text of each item inside the dropdown list container */
 .dropdownListItem span {
     text-decoration: none;
     color: #000000;

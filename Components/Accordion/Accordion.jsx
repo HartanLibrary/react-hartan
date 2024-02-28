@@ -26,7 +26,7 @@ export default function Accordion({ accordionList = list, userAccordionStyle, us
     const [openAccordion, toggle] = useAccordion(null);
 
     return (
-        <section className={`${accordionStyle.accordion} ${userAccordionStyle}`}>
+        <section className={`${userAccordionStyle}`}>
             {
                 accordionList.map((data, id) => {
                     return (

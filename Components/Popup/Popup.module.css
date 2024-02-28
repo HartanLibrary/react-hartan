@@ -1,3 +1,6 @@
+/* Popup Styling */
+
+/* Popup content container */
 .popupContent {
     position: fixed;
     inset: 0;
@@ -7,6 +10,7 @@
     justify-content: center;
 }
 
+/* Container inside popup content container */
 .popupContentBox {
     display: flex;
     flex-direction: column;
@@ -15,12 +19,13 @@
     padding: 2rem 5rem;
 }
 
+/* Cancel button inside popup content box */
 .popupContentBox .cancelBtn {
     place-self: end;
     cursor: pointer;
 }
 
-
+/* Popup content box material container */
 .popupContentBoxMaterial {
     background-color: #1e90ff;
     padding: 2rem 4rem;
@@ -39,7 +44,7 @@
     font-weight: 500;
 }
 
-.popupContentBoxMaterial button{
+/* Button inside the popup content box container */
+.popupContentBoxMaterial button {
     place-self: center;
 }
-

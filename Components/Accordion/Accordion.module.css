@@ -1,3 +1,6 @@
+/* Accordion Style */
+
+/* Each Accrodion Box */
 .accordionBox {
     background-color: #1e90ff;
     margin: .5rem 0;
@@ -6,6 +9,7 @@
     width: 50rem;
 }
 
+/* A div inside each accordion box */
 .accordionTitle {
     display: flex;
     justify-content: space-between;
@@ -14,16 +18,19 @@
 
 }
 
+/* Question Text inside each accordion box */
 .accordionQues {
     font-size: 2rem;
     font-weight: 500;
 }
 
+/* Sign button inside each accordion box */
 .accordionSign {
     font-size: 2.5rem;
     font-weight: 500;
 }
 
+/* Hidden Content Styling */
 .accordionContentHide {
     font-size: 1.25rem;
     font-weight: 500;
@@ -33,16 +40,16 @@
     transition: all .5s cubic-bezier(0, 1, 0, 1);
 }
 
+/* Hidden Content Styling when visible */
 .accordionContentHide.accordionContentShow {
     height: auto;
     max-height: 999px;
     transition: all .5s cubic-bezier(1, 0, 1, 0);
 }
 
+/* Responsive Design */
 @media (max-width: 768px) {
-    .accordion {
-        .accordionBox {
-            width: 20rem;
-        }
+    .accordionBox {
+        width: 20rem;
     }
 }

@@ -1,3 +1,6 @@
+/*  Statistics Styling */
+
+/* statistics section container */
 .statistics {
     display: flex;
     justify-content: space-around;
@@ -6,6 +9,7 @@
     padding: 1rem 5rem;
 }
 
+/* statistics div container */
 .abtStats {
     display: flex;
     flex-direction: column;
@@ -13,7 +17,6 @@
     align-items: start;
     gap: 5rem;
 }
-
 
 .abtStats div h1 {
     font-size: 3rem;
@@ -25,7 +28,7 @@
     color: #6b6868;
 }
 
-
+/* statistics data container */
 .statsBlocks {
     display: flex;
     justify-content: space-around;
@@ -45,7 +48,7 @@
     font-size: 2rem;
 }
 
-
+/* Responsive Design */
 @media (max-width:1024px) {
     .statistics {
         flex-direction: column;

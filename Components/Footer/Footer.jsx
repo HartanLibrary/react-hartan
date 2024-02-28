@@ -8,19 +8,19 @@ export const footerLinksArray = [
     footerLinks: [
       {
         footerLinkName: "GitHub",
-        footerLinksrc: "https://github.com/akkshayTandon/react-hartan-js"
+        footerLinkSrc: "https://github.com/akkshayTandon/react-hartan-js"
       },
       {
         footerLinkName: "LinkedIn",
-        footerLinksrc: ""
+        footerLinkSrc: ""
       },
       {
         footerLinkName: "Instagram",
-        footerLinksrc: ""
+        footerLinkSrc: ""
       },
       {
         footerLinkName: "YouTube",
-        footerLinksrc: ""
+        footerLinkSrc: ""
       }
     ]
   },
@@ -29,19 +29,19 @@ export const footerLinksArray = [
     footerLinks: [
       {
         footerLinkName: "Gomtinagar and Daliganj, Lucknow",
-        footerLinksrc: ""
+        footerLinkSrc: ""
       },
       {
         footerLinkName: "hartanlibrary@gmail.com",
-        footerLinksrc: "mailto:hartanlibrary@gmail.com"
+        footerLinkSrc: "mailto:hartanlibrary@gmail.com"
       },
       {
         footerLinkName: "9999999999",
-        footerLinksrc: ""
+        footerLinkSrc: ""
       },
       {
         footerLinkName: "9999999999",
-        footerLinksrc: ""
+        footerLinkSrc: ""
       }
     ]
   }
@@ -56,14 +56,14 @@ export default function Footer({ footerList = footerLinksArray, copyrightYear = 
         {footerList.map((footerLink, id) => {
           return (
             <div className={`${userFooterLinksStyle}`} key={id}>
-              <h2 className={``}>
+              <h2>
                 {footerLink.footerLinkHeading}
               </h2>
               <div className={`${footerStyles.linksdata}`}>
                 {footerLink.footerLinks.map((link, id) => {
                   return (
                     <li key={id}>
-                      <a className={``} href={link.footerLinksrc}>
+                      <a className={``} href={link.footerLinkSrc}>
                         {link.footerLinkName}
                       </a>
                     </li>
@@ -81,7 +81,6 @@ export default function Footer({ footerList = footerLinksArray, copyrightYear = 
           <strong> {copyrightName} </strong>
         </p>
       </div>
-
 
     </footer>
   );

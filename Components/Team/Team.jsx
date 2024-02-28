@@ -44,7 +44,7 @@ const list = [
     }
 ];
 
-export default function Team({ memberList = list, teamSectionHeading = "Our Team", teamSectionContent = "Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut dicta molestias, ad delectus qui corrupti aliquid minus a quo ipsa cumque aspernatur, veritatis dolorum ipsam!", userTeamStyle, userTeamDetailsCaptionStyle, userTeamMembersStyle, userTeamMemberCardStyle, userTeamMemberNameStyle, userTeamMemberPositionStyle }) {
+export default function Team({ memberList = list, teamSectionHeading = "Our Team", teamSectionContent = "Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut dicta molestias, ad delectus qui corrupti aliquid minus a quo ipsa cumque aspernatur, veritatis dolorum ipsam!", imgState = true, userTeamStyle, userTeamDetailsCaptionStyle, userTeamMembersStyle, userTeamMemberCardStyle, userTeamMemberNameStyle, userTeamMemberPositionStyle }) {
 
     return (
         <section className={`${teamStyle.team} ${userTeamStyle}`}>
@@ -58,9 +58,13 @@ export default function Team({ memberList = list, teamSectionHeading = "Our Team
                     memberList.map((member, id) => {
                         return (
                             <div key={id} className={`${teamStyle.teamMemberCard} ${userTeamMemberCardStyle}`}>
-                                <figure>
-                                    <img src={member.memberImg} alt={member.memberName} />
-                                </figure>
+                                {
+                                    imgState &&
+                                    <figure>
+                                        <img src={member.memberImg} alt={member.memberName} />
+                                    </figure>
+                                }
+                                
                                 <div>
                                     <p className={`${teamStyle.teamMemberName} ${userTeamMemberNameStyle}`}>{member.memberName}</p>
                                     <p className={`${teamStyle.teamMemberPosition}  ${userTeamMemberPositionStyle}`}>{member.memberPosition}</p>

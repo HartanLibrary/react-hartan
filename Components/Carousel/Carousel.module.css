@@ -1,3 +1,6 @@
+/* Carousel Styling */
+
+/* Carousel container */
 .carousel {
     display: flex;
     align-items: center;
@@ -9,6 +12,7 @@
     height: 25rem;
 }
 
+/* Arrows container */
 .arrows {
     cursor: pointer;
     z-index: 9;
@@ -33,7 +37,7 @@
     right: 1%;
 }
 
-
+/* images container */
 .images {
     display: flex;
     gap: 1rem;

@@ -1,3 +1,6 @@
+/* Testimonial Styling */
+
+/* testimonial section container */
 .testimonial {
     display: flex;
     flex-direction: column;
@@ -9,11 +12,13 @@
     padding: 1rem;
 }
 
+/* review content container */
 .review {
     font-size: 1.6rem;
     font-weight: 500;
 }
 
+/* reviewer name container */
 .reviewerName {
     border-top: 2px solid rgb(46, 46, 46);
     padding-top: 1rem;

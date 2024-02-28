@@ -1,5 +1,6 @@
 /* Card CSS Module */
 
+/* Styling for full card */
 .cardSection {
     display: flex;
     flex-direction: column;
@@ -12,16 +13,24 @@
     box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
 }
 
+/* Styling for full card when hovered */
+.cardSection:hover {
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
+/* Styling for the container containing image inside the card */
 .cardSection figure {
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
+/* Styling for the image inside the card */
 .cardSection figure img {
     height: 20rem;
 }
 
+/* Styling for content container inside the card */
 .content {
     padding: .5rem 2rem 2rem 2rem;
     display: flex;
@@ -31,14 +40,12 @@
     gap: 2rem;
 }
 
+/* Styling for the heading inside the content container */
 .content h1 {
     font-size: 3rem;
 }
 
+/* Styling for the paragraph text inside the content container */
 .content p {
     font-size: 1.35rem;
-}
-
-.cardSection:hover {
-    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
 }

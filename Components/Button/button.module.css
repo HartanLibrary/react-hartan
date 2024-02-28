@@ -1,5 +1,6 @@
 /* Button CSS Module */
 
+/* Button style on normal state */
 .generalBtn{
     outline: none;
     border: none;
@@ -15,11 +16,13 @@
     border-radius: 4px;
 }
 
+/* Button style on hover */
 .generalBtn:hover {
     background: rgb(2, 0, 36);
     background: linear-gradient(90deg, rgba(30, 144, 255, 1) 0%, rgba(0, 212, 255, 1) 100%);
 }
 
+/* Button style when active */
 .generalBtn:active {
     transform: translate(0em, 0.2em);
 }

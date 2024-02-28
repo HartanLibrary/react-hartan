@@ -1,11 +1,10 @@
-import buttonStyles from "./button.module.css";
-import PropTypes from "prop-types";
-import "../index.css"
+import buttonStyles from "./button.module.css"
+import PropTypes from "prop-types"
 
-export default function Button({ buttonText = "Hartan", userButtonStyle, onclick }) {
+export default function Button({ buttonText = "Hartan", userButtonStyle, onClickFunction }) {
 
     function handleClick(){
-        onclick();
+        onClickFunction();
     }
 
     return (
@@ -16,5 +15,5 @@ export default function Button({ buttonText = "Hartan", userButtonStyle, onclick
 Button.propTypes = {
     buttonText: PropTypes.string,
     userButtonStyle: PropTypes.string,
-    onclick: PropTypes.func
+    onClickFunction: PropTypes.func
 };

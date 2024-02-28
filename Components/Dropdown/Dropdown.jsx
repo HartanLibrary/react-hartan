@@ -1,21 +1,25 @@
-import { useState } from "react"
+import useDropdown from "../../Hooks/Dropdown"
 import dropdownStyle from "./Dropdown.module.css"
 import PropTypes from "prop-types"
 
 const list = [
-    "Home",
-    "About",
-    "Contact",
-    "Services"
+    "Item 1",
+    "Item 2",
+    "Item 3",
+    "Item 4"
 ];
 
-export default function Dropdown({ listItem = list, btnTxt = "Dropdown", userDropdownStyle, userDropdownList,userButtonStyle,userDropdownListItem }) {
+function onClickItem(val){
+    console.log(val)
+}
 
-    const [isOpen, setIsOpen] = useState(false);
+export default function Dropdown({ listItem = list, buttonText = "Dropdown", onClickFunction = onClickItem, userDropdownStyle, userDropdownListStyle, userDropdownListItemStyle, userButtonStyle }) {
+
+    const [isOpen, setIsOpen, handleDropdownButtonClick, dropdownText] = useDropdown(buttonText, onClickFunction);
 
     return (
         <section className={`${dropdownStyle.dropdown} ${userDropdownStyle}`}>
-            <button className={`${dropdownStyle.dropdownBtn} ${userButtonStyle}`} onClick={() => setIsOpen((prev) => !prev)}>{btnTxt}
+            <button className={`${dropdownStyle.dropdownBtn} ${userButtonStyle}`} onClick={() => setIsOpen(!isOpen)}>{dropdownText}
                 {
                     isOpen ? (
                         <span>
@@ -29,11 +33,11 @@ export default function Dropdown({ listItem = list, btnTxt = "Dropdown", userDro
                         )
                 }
             </button>
-            <ul className={`${dropdownStyle.dropdownList} ${userDropdownList}`}>
+            <ul className={`${dropdownStyle.dropdownList} ${userDropdownListStyle}`}>
                 {
                     isOpen && (
                         listItem.map((listText, id) => {
-                            return <li className={`${dropdownStyle.dropdownListItem} ${userDropdownListItem}`} key={id} onClick={() => setIsOpen((prev)=>!prev)}><span>{listText}</span></li>
+                            return <li className={`${dropdownStyle.dropdownListItem} ${userDropdownListItemStyle}`} key={id} onClick={handleDropdownButtonClick}><span>{listText}</span></li>
                         })
                     )
                 }
@@ -44,9 +48,10 @@ export default function Dropdown({ listItem = list, btnTxt = "Dropdown", userDro
 
 Dropdown.propTypes = {
     listItem: PropTypes.arrayOf(PropTypes.string),
-    btnTxt: PropTypes.string,
+    buttonText: PropTypes.string,
+    onClickFunction: PropTypes.func,
     userDropdownStyle: PropTypes.string,
     userButtonStyle: PropTypes.string,
-    userDropdownList:PropTypes.string,
-    userDropdownListItem:PropTypes.string
+    userDropdownList: PropTypes.string,
+    userDropdownListItem: PropTypes.string
 };

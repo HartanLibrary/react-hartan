@@ -20,14 +20,14 @@ const list = [
     },
 ];
 
-export default function Statistics({ statsBlockData = list, statisticsHeading = "Hartan", statisticsHeadingAbt = "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Praesentium libero architecto ipsum nostrum impedit similique neque mollitia dolores quasi autem cum ea, quas aspernatur? Deserunt.", imgSrc = "https://dummyimage.com/500x250", userStatisticsStyle, userAbtStatsStyle, userStatsBlocksStyle, imgState = true }) {
+export default function Statistics({ statsBlockData = list, statisticsHeading = "Hartan", statisticsHeadingAbout = "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Praesentium libero architecto ipsum nostrum impedit similique neque mollitia dolores quasi autem cum ea, quas aspernatur? Deserunt.", imgSrc = "https://dummyimage.com/500x250", imgState = true, userStatisticsStyle, userStatsContentStyle, userStatsBlocksStyle }) {
 
     return (
         <section className={`${statisticsStyle.statistics} ${userStatisticsStyle}`}>
-            <div className={`${statisticsStyle.abtStats} ${userAbtStatsStyle}`}>
+            <div className={`${statisticsStyle.abtStats} ${userStatsContentStyle}`}>
                 <div>
                     <h1>{statisticsHeading}</h1>
-                    <p>{statisticsHeadingAbt}</p>
+                    <p>{statisticsHeadingAbout}</p>
                 </div>
                 <div className={`${statisticsStyle.statsBlocks} ${userStatsBlocksStyle}`}>
                     {
@@ -42,6 +42,7 @@ export default function Statistics({ statsBlockData = list, statisticsHeading = 
                     }
                 </div>
             </div>
+
             {
                 imgState &&
                 <figure>
@@ -59,9 +60,10 @@ Statistics.propTypes = {
         data: PropTypes.string
     })),
     statisticsHeading: PropTypes.string,
-    statisticsHeadingAbt: PropTypes.string,
+    statisticsHeadingAbout: PropTypes.string,
     imgSrc: PropTypes.string,
+    imgState: PropTypes.bool,
     userStatisticsStyle: PropTypes.string,
-    userAbtStatsStyle: PropTypes.string,
+    userStatsContentStyle: PropTypes.string,
     userStatsBlocksStyle: PropTypes.string
 };
