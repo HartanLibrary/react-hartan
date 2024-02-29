@@ -23,6 +23,11 @@ button {
     cursor: pointer;
 }
 
+/* Open & close button of navbar */
+.navButtonSvgColor {
+    fill: #000000;
+}
+
 /* Close Menu Button Style */
 .closeMenuBtn {
     display: none;
