@@ -1,7 +1,7 @@
 
 <p align="center">
   <a href="">
-    <img src="images/hartan.png" alt="Bootstrap logo" width="150" height="165">
+    <img src="images/hartan.png" alt="Hartan Logo" width="150" height="165">
   </a>
 </p>
 
@@ -47,7 +47,7 @@ Install with npm
     
 ## Documentation
 
-Visit the [Hartan Docs](https://linktodocumentation) to for detailed explanations and usage.
+Visit the [Hartan Docs]() to for detailed explanations and usage.
 
 
 ## Contributing
@@ -83,5 +83,5 @@ Insert gif or link to demo (sample website link goes here)
 
 ## License
 
-[![MIT License](https://img.shields.io/badge/License-MIT-green.svg)](https://choosealicense.com/licenses/mit/)
+[![MIT License](https://img.shields.io/badge/License-MIT-green.svg)](/LICENSE.txt)
 

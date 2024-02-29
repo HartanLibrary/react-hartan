@@ -84,7 +84,21 @@ export default function Form({ fields = fieldsData, actionURL = "https://jsonpla
 }
 
 Form.propTypes = {
-    fields: PropTypes.arrayOf(PropTypes.string),
+    fields: PropTypes.shape({
+        inputTag: PropTypes.arrayOf(PropTypes.shape({
+            inputType: PropTypes.string,
+            inputId: PropTypes.string,
+            inputName: PropTypes.string,
+            inputLabel: PropTypes.string,
+            required: PropTypes.bool
+        })),
+        textareaTag: PropTypes.arrayOf(PropTypes.shape({
+            textareaId: PropTypes.string,
+            textareaName: PropTypes.string,
+            textareaLabel: PropTypes.string,
+            required: PropTypes.bool
+        }))
+    }),
     actionURL: PropTypes.string,
     userFormCardStyle: PropTypes.string,
     userTitleStyle: PropTypes.string,
