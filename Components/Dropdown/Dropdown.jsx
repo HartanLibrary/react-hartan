@@ -10,7 +10,7 @@ const list = [
 ];
 
 function onClickItem(val){
-    console.log(val)
+    console.log(val);
 }
 
 export default function Dropdown({ listItem = list, buttonText = "Dropdown", onClickFunction = onClickItem, userDropdownStyle, userDropdownListStyle, userDropdownListItemStyle, userButtonStyle }) {

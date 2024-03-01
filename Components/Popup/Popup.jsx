@@ -11,7 +11,7 @@ export default function Popup({ buttonText = "Popup", userButtonStyle, onClickFu
 
     return (
         <section className={`${userPopupStyle}`}>
-            <Button buttonStyle={userButtonStyle} buttonText={buttonText} onClickFunction={() => popupState(true)} />
+            <Button userButtonStyle={userButtonStyle} buttonText={buttonText} onClickFunction={() => popupState(true)} />
             {
                 showPopup &&
                 <div className={`${popupStyle.popupContent} ${userPopupContentStyle}`}>
@@ -22,8 +22,7 @@ export default function Popup({ buttonText = "Popup", userButtonStyle, onClickFu
                         <div className={`${popupStyle.popupContentBoxMaterial} ${userPopupContentBoxMaterialStyle}`}>
                             <h1>{popupContentBoxMaterialHeading}</h1>
                             <p>{popupContentBoxMaterialPara}</p>
-                            <Button buttonStyle={userButtonStyleInsidePopup} buttonText={popupContentBoxMaterialButtonText} onClickFunction={onClickFunction}></Button>
-
+                            <Button userButtonStyle={userButtonStyleInsidePopup} buttonText={popupContentBoxMaterialButtonText} onClickFunction={onClickFunction}></Button>
                         </div>
                     </div>
                 </div>

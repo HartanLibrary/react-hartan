@@ -84,7 +84,7 @@ export default function Navbar({ navList = list, statesObj = states, onClickFunc
 
             {
                 statesObj.buttonState &&
-                <Button buttonStyle={`${userButtonStyle}`} buttonText={buttonText} onClickFunction={onClickFunction}></Button>
+                <Button userButtonStyle={`${userButtonStyle}`} buttonText={buttonText} onClickFunction={onClickFunction}></Button>
             }
         </header>
     )
@@ -113,5 +113,6 @@ Navbar.propTypes = {
     userNavListStyle: PropTypes.string,
     userNavListItemStyle: PropTypes.string,
     userLogoStyle: PropTypes.string,
-    userButtonStyle: PropTypes.string
+    userButtonStyle: PropTypes.string,
+    userNavButtonSvgColor: PropTypes.string
 };

@@ -20,7 +20,7 @@ export default function Card({ buttonText = "Card Button", onClickFunction, user
                     <h1>{contentHeading}</h1>
                     <p>{contentPara}</p>
                 </div>
-                <Button buttonStyle={userButtonStyle} buttonText={buttonText} onClickFunction={onClickFunction}/>
+                <Button userButtonStyle={userButtonStyle} buttonText={buttonText} onClickFunction={onClickFunction}/>
             </div>
         </section>
     )
