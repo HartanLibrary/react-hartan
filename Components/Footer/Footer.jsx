@@ -47,7 +47,7 @@ export const footerLinksArray = [
   }
 ];
 
-export default function Footer({ footerList = footerLinksArray, copyrightYear = "2024", copyrightName = "Hartan Library", userFooterStyle, userLinksStyle, userFooterLinksStyle, userCopyrightStyle }) {
+export default function Footer({ footerList = footerLinksArray, copyrightYear = "2024", copyrightName = "Hartan Library", userFooterStyle, userLinksStyle, userFooterLinksStyle, userLinksDataStyle, userCopyrightStyle }) {
 
   return (
     <footer id="" className={`${userFooterStyle}`}>
@@ -59,11 +59,11 @@ export default function Footer({ footerList = footerLinksArray, copyrightYear = 
               <h2>
                 {footerLink.footerLinkHeading}
               </h2>
-              <div className={`${footerStyles.linksdata}`}>
+              <div className={`${footerStyles.linksdata} ${userLinksDataStyle}`}>
                 {footerLink.footerLinks.map((link, id) => {
                   return (
                     <li key={id}>
-                      <a className={``} href={link.footerLinkSrc}>
+                      <a href={link.footerLinkSrc}>
                         {link.footerLinkName}
                       </a>
                     </li>
