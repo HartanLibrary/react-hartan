@@ -42,7 +42,7 @@ We want to help developers to work more efficiently providing them with a simple
 Install with npm
 
 ```bash
-  npm install react-hartan-js
+  npm install react-hartan
 ```
     
 ## Documentation
