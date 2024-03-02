@@ -18,7 +18,7 @@ export default function Card({ buttonText = "Card Button", onClickFunction, user
             <div className={`${cardStyle.content} ${userContentStyle}`}>
                 <div>
                     <h1>{contentHeading}</h1>
-                    <p>{contentPara}</p>
+                    <div>{contentPara}</div>
                 </div>
                 <Button userButtonStyle={userButtonStyle} buttonText={buttonText} onClickFunction={onClickFunction}/>
             </div>

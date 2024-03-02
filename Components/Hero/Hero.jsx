@@ -11,7 +11,7 @@ export default function HeroSection({ heroHeadName = "Hartan Component Library",
         <section className={`${heroSectionStyles.heroSection} ${userHeroSectionStyle}`}>
             <div className={`${heroSectionStyles.heroSectionAbout} ${userHeroContentStyle}`}>
                 <h1>{heroHeadName}</h1>
-                <p>{heroAbout}</p>
+                <div>{heroAbout}</div>
                 <Button userButtonStyle={`${userButtonStyle}`} buttonText={buttonText} onClickFunction={onClickFunction}/>
             </div>
 

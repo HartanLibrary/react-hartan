@@ -21,7 +21,7 @@ export default function Popup({ buttonText = "Popup", userButtonStyle, onClickFu
                         </span>
                         <div className={`${popupStyle.popupContentBoxMaterial} ${userPopupContentBoxMaterialStyle}`}>
                             <h1>{popupContentBoxMaterialHeading}</h1>
-                            <p>{popupContentBoxMaterialPara}</p>
+                            <div>{popupContentBoxMaterialPara}</div>
                             <Button userButtonStyle={userButtonStyleInsidePopup} buttonText={popupContentBoxMaterialButtonText} onClickFunction={onClickFunction}></Button>
                         </div>
                     </div>

@@ -46,6 +46,6 @@
 }
 
 /* Styling for the paragraph text inside the content container */
-.content p {
+.content div {
     font-size: 1.35rem;
 }

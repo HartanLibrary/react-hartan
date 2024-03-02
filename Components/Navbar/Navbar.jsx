@@ -6,20 +6,16 @@ import PropTypes from "prop-types"
 
 const list = [
     {
-        href: "",
-        text: "Home",
+        elem: <a>Home</a>,
     },
     {
-        href: "",
-        text: "About",
+        elem: <a>About</a>,
     },
     {
-        href: "",
-        text: "Contact",
+        elem: <a>Contact</a>,
     },
     {
-        href: "",
-        text: "Services",
+        elem: <a>Services</a>,
     }
 ];
 
@@ -63,7 +59,9 @@ export default function Navbar({ navList = list, statesObj = states, onClickFunc
                                 {
                                     navList?.map((listItem, id) => {
                                         return <li key={id} onClick={closeSidebar} className={`${userNavListItemStyle}`}>
-                                            <a href={listItem.href}>{listItem.text}</a>
+                                            {
+                                                listItem.elem
+                                            }
                                         </li>
                                     })
                                 }
@@ -74,7 +72,11 @@ export default function Navbar({ navList = list, statesObj = states, onClickFunc
                             <ul>
                                 {
                                     navList?.map((listItem, id) => {
-                                        return <li key={id} className={`${userNavListItemStyle}`}><a href={listItem.href}>{listItem.text}</a></li>
+                                        return <li key={id} className={`${userNavListItemStyle}`}>
+                                            {
+                                                listItem.elem
+                                            }
+                                        </li>
                                     })
                                 }
                             </ul>
@@ -93,10 +95,9 @@ export default function Navbar({ navList = list, statesObj = states, onClickFunc
 
 Navbar.propTypes = {
     navList: PropTypes.arrayOf(PropTypes.shape({
-        href: PropTypes.string,
-        text: PropTypes.string
+        elem: PropTypes.element
     })),
-    imgSrc: PropTypes.string,
+    logoImgSrc: PropTypes.string,
     logoName: PropTypes.string,
     buttonText: PropTypes.string,
     onClickFunction: PropTypes.func,

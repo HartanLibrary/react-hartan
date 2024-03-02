@@ -8,9 +8,9 @@
 <h3 align="center">Hartan JS</h3>
 
 <p align="center">
-  A, intuitive, and customizable front-end UI Component Library for faster and easier web development.
+  An intuitive and customizable front-end UI Component Library for faster and easier web development.
   <br>
-  <a href=""><strong>Explore Hartan docs »</strong></a>
+  <a href=""><strong>Explore Hartan Docs »</strong></a>
   <br>
   <br>
   <a href="">Report bug</a>
@@ -33,7 +33,7 @@ We want to help developers to work more efficiently providing them with a simple
 - [Documentation](#documentation)
 - [Contribution](#contributing)
 - [Demo](#demo)
-- [Screenshots](#screenshots)
+- [Screenshots](#components-screenshots)
 - [License](#license)
 
 
@@ -56,7 +56,7 @@ Contributions are always welcome!
 
 See [`contributing.md`]() for ways to get started.
 
-Please adhere to this project's [`code of conduct`]().
+Please adhere to this project's [`code of conduct`](/CODE_OF_CONDUCT.md).
 
 
 ## Demo
@@ -64,7 +64,7 @@ Please adhere to this project's [`code of conduct`]().
 Insert gif or link to demo (sample website link goes here)
 
 
-## Screenshots
+## Components Screenshots
 
 ![Accordion Screenshot](images/accordion.png)<br><br>
 ![Button Screenshot](images/button.png)<br><br>
