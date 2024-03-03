@@ -77,6 +77,7 @@ Insert gif or link to demo (sample website link goes here)
 ![Navbar Screenshot](images/navbar.png)<br><br>
 ![Popup Screenshot](images/popup.png)<br><br>
 ![Sidemenu Screenshot](images/sidemenu.png)<br><br>
+![Snippet Screenshot](images/snippet.png)<br><br>
 ![Statistics Screenshot](images/statistics.png)<br><br>
 ![Team Screenshot](images/team.png)<br><br>
 ![Testimonial Screenshot](images/testimonial.png)<br><br>
