@@ -9,12 +9,14 @@ import HeroSection from "./Components/Hero/Hero"
 import Navbar from "./Components/Navbar/Navbar"
 import Popup from "./Components/Popup/Popup"
 import Sidemenu from "./Components/Sidemenu/Sidemenu"
+import Snippet from "./Components/Snippet/Snippet"
 import Statistics from "./Components/Statistics/Statistics"
 import Team from "./Components/Team/Team"
 import Testimonial from "./Components/Testimonial/Testimonial"
 
+import useCopy from "./Hooks/Snippet"
 import useFetch from "./Hooks/Fetch"
 
 import "./Components/hartan.css"
 
-export { Accordion, Button, Card, Carousel, Dropdown, Footer, Form, HeroSection, Navbar, Popup, Sidemenu, Statistics, Team, Testimonial, useFetch }
+export { Accordion, Button, Card, Carousel, Dropdown, Footer, Form, HeroSection, Navbar, Popup, Sidemenu, Snippet, Statistics, Team, Testimonial, useCopy, useFetch }
