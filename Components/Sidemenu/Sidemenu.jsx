@@ -3,23 +3,24 @@ import PropTypes from "prop-types"
 
 const list = [
     {
+        logo: <a><img src="https://dummyimage.com/50x50" /></a>,
         elem: <a>Home</a>,
     },
     {
+        logo: <a><img src="https://dummyimage.com/50x50" /></a>,
         elem: <a>About</a>,
     },
     {
+        logo: <a><img src="https://dummyimage.com/50x50" /></a>,
         elem: <a>Contact</a>,
     },
     {
+        logo: <a><img src="https://dummyimage.com/50x50" /></a>,
         elem: <a>Services</a>,
     },
 ];
 
-export default function Sidemenu({ navList = list, imgSrc = "https://dummyimage.com/50x50", imgState = true, logoName = "Hartan", userNavbarStyle, userNavToggleStyle, userNavHeaderStyle, userNavTitleStyle, userNavContentStyle, userNavButtonStyle }) {
-
-
-
+export default function Sidemenu({ navList = list, logoName = "Hartan", userNavbarStyle, userNavToggleStyle, userNavHeaderStyle, userNavTitleStyle, userNavContentStyle, userNavButtonStyle }) {
 
     return (
         <div className={`${sidemenuStyle.navBar} ${userNavbarStyle}`}>
@@ -34,8 +35,9 @@ export default function Sidemenu({ navList = list, imgSrc = "https://dummyimage.
                 {
                     navList.map((item, id) => {
                         return (
-                            <div className={`${sidemenuStyle.navButton} ${userNavButtonStyle}`} key={id}>{imgState && <img src={imgSrc} alt="logo" />}
-                                <span>{item.elem}</span>
+                            <div className={`${sidemenuStyle.navButton} ${userNavButtonStyle}`} key={id}>
+                                {item.logo}
+                                <span> {item.elem}</span>
                             </div>
                         )
                     })
@@ -47,10 +49,11 @@ export default function Sidemenu({ navList = list, imgSrc = "https://dummyimage.
 
 Sidemenu.propTypes = {
     navList: PropTypes.arrayOf(PropTypes.shape(
-        { elem: PropTypes.element }
+        {
+            logo: PropTypes.element,
+            elem: PropTypes.element
+        }
     )),
-    imgSrc: PropTypes.string,
-    imgState: PropTypes.bool,
     logoName: PropTypes.string,
     userNavbarStyle: PropTypes.string,
     userNavToggleStyle: PropTypes.string,

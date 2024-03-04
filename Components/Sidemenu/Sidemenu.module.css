@@ -23,6 +23,56 @@
     transition: opacity 0.1s;
 }
 
+@media (width < 1024px) {
+
+    .navToggle:not(:checked)~.navHeader {
+        width: calc(8rem - 1.6rem);
+    }
+
+    .navToggle:not(:checked)~.navContent {
+        width: 8rem;
+    }
+
+    .navToggle:not(:checked)~.navHeader .navTitle {
+        opacity: 0;
+        pointer-events: none;
+        transition: opacity 0.1s;
+    }
+
+    .navToggle:not(:checked)~.navHeader .lableTag {
+        left: calc(50% - .8rem);
+        font-size: x-large;
+        transform: rotate(-180deg);
+    }
+
+    .navToggle:not(:checked)~.navContent .navButton span {
+        opacity: 0;
+        transition: opacity 0.1s;
+    }
+
+    .navToggle:checked~.navHeader {
+        width: calc(25.6rem - 16px);
+    }
+
+    .navToggle:checked~.navContent {
+        width: 25.6rem;
+    }
+
+    .navToggle:checked~.navHeader .navTitle {
+        opacity: 1;
+    }
+
+    .navToggle:checked~.navHeader .lableTag {
+        left: calc(50% + 8rem);
+        transform: rotate(0deg);
+    }
+
+    .navToggle:checked~.navContent .navButton span {
+        opacity: 1;
+    }
+
+}
+
 .navBar {
     position: absolute;
     left: 1vw;
@@ -36,8 +86,6 @@
     overflow: hidden;
     user-select: none;
 }
-
-
 
 .navBar a {
     color: inherit;
@@ -120,7 +168,7 @@
     transition: color 0.2s;
 }
 
-.navButton img{
+.navButton img {
     margin-right: 1.25rem;
     height: 4rem;
     object-fit: contain;
@@ -128,8 +176,12 @@
 
 .navButton span {
     transition: opacity 1s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
-.navButton:hover  span{
+
+.navButton:hover span {
     color: #ffffff;
     font-weight: 500;
 }

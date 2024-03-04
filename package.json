@@ -1,6 +1,6 @@
 {
   "name": "react-hartan",
-  "version": "1.0.8",
+  "version": "1.0.9",
   "description": "A simple components library for React",
   "main": "index.js",
   "scripts": {
@@ -8,9 +8,16 @@
   },
   "keywords": [
     "hartan",
+    "hartan ui",
+    "react hartan",
+    "ui kit",
     "react",
+    "react ui library",
+    "react-component",
+    "ui library",
+    "ui",
     "components",
-    "library",
+    "library components",
     "npm",
     "package"
   ],
