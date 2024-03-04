@@ -10,17 +10,17 @@ const imageList = [
     "https://dummyimage.com/605x300",
 ];
 
-export default function Carousel({ images = imageList }) {
+export default function Carousel({ images = imageList, userCarouselStyle, userImagesStyle }) {
 
     const [currentSlide, handleLeftArrow, handleRightArrow] = useCarousel(0, images.length);
 
     return (
-        <section className={`${carouselStyle.carousel}`}>
+        <section className={`${carouselStyle.carousel} ${userCarouselStyle}`}>
             <div className={`${carouselStyle.arrows}`}>
-                <span className={`${carouselStyle.leftArrow} ${carouselStyle.carouselItemPrev}`} onClick={handleLeftArrow}>&lt;</span>
-                <span className={`${carouselStyle.rightArrow} ${carouselStyle.carouselItemNext}`} onClick={handleRightArrow}>&gt;</span>
+                <span className={`${carouselStyle.leftArrow}`} onClick={handleLeftArrow}>&lt;</span>
+                <span className={`${carouselStyle.rightArrow}`} onClick={handleRightArrow}>&gt;</span>
             </div>
-            <div className={`${carouselStyle.images}`}>
+            <div className={`${carouselStyle.images} ${userImagesStyle}`}>
                 {
                     images.map((image, index) => {
                         return (
@@ -36,5 +36,7 @@ export default function Carousel({ images = imageList }) {
 }
 
 Carousel.propTypes = {
-    images: PropTypes.arrayOf(PropTypes.string)
+    images: PropTypes.arrayOf(PropTypes.string),
+    userCarouselStyle: PropTypes.string,
+    userImagesStyle: PropTypes.string
 };
