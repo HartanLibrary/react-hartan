@@ -1,12 +1,13 @@
 import { useState, useEffect } from "react";
 import useFetch from "./Fetch";
 
-export default function useForm(actionURL){
+export default function useForm(actionURL) {
 
     const [data, setData] = useState({});
     const [, postData] = useFetch();
     const [submitted, setSubmitted] = useState(false);
     let [result, responseStatus] = "";
+    const [returnValue, setReturnValue] = useState({});
 
     const updateData = (e) => {
         setData({
@@ -18,9 +19,12 @@ export default function useForm(actionURL){
     const submit = async (e) => {
         e.preventDefault();
         [result, responseStatus] = await postData(actionURL, data);
-        console.log(result, responseStatus);
         setSubmitted(true);
         e.target.reset();
+        setReturnValue({
+            result: result,
+            responseStatus: responseStatus
+        })
     };
 
     useEffect(() => {
@@ -29,5 +33,5 @@ export default function useForm(actionURL){
         }, 2500);
     }, [submitted]);
 
-    return [updateData, submit, submitted];
+    return [updateData, submit, submitted, returnValue];
 }

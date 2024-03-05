@@ -36,9 +36,9 @@ const fieldsData = {
     ]
 };
 
-export default function Form({ fields = fieldsData, actionURL = "https://jsonplaceholder.typicode.com/posts", userFormCardStyle, userTitleStyle, userFormStyle, userInputFieldStyle }) {
 
-    const [updateData, submit, submitted] = useForm(actionURL);
+export default function Form({ fields = fieldsData, updateData, submit, submitted, userFormCardStyle, userTitleStyle, userFormStyle, userInputFieldStyle, userSubmittedStyle, userSubmittedSVGstyle }) {
+
 
     return (
         <div className={`${formStyle.formCard} ${userFormCardStyle}`}>
@@ -73,8 +73,8 @@ export default function Form({ fields = fieldsData, actionURL = "https://jsonpla
 
             {
                 submitted &&
-                <div className={`${formStyle.submitted}`}>
-                    <svg className={`${formStyle.submittedSVG}`} xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="100" height="100" viewBox="0 0 40 40">
+                <div className={`${formStyle.submitted} ${userSubmittedStyle}`}>
+                    <svg className={`${formStyle.submittedSVG} ${userSubmittedSVGstyle}`} xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="100" height="100" viewBox="0 0 40 40">
                         <path fill="#98ccfd" d="M20,38.5C9.8,38.5,1.5,30.2,1.5,20S9.8,1.5,20,1.5S38.5,9.8,38.5,20S30.2,38.5,20,38.5z"></path><path fill="none" stroke="#4788c7" strokeMiterlimit="10" d="M20,38.5C9.8,38.5,1.5,30.2,1.5,20S9.8,1.5,20,1.5S38.5,9.8,38.5,20S30.2,38.5,20,38.5z"></path><path fill="none" stroke="#fff" strokeMiterlimit="10" strokeWidth="2" d="M11,20l6,6l13-13"></path>
                     </svg>
                 </div>
@@ -99,9 +99,10 @@ Form.propTypes = {
             required: PropTypes.bool
         }))
     }),
-    actionURL: PropTypes.string,
     userFormCardStyle: PropTypes.string,
     userTitleStyle: PropTypes.string,
     userFormStyle: PropTypes.string,
-    userInputFieldStyle: PropTypes.string
+    userInputFieldStyle: PropTypes.string,
+    userSubmittedStyle: PropTypes.string,
+    userSubmittedSVGstyle: PropTypes.string
 };
