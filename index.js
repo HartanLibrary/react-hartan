@@ -16,7 +16,8 @@ import Testimonial from "./Components/Testimonial/Testimonial"
 
 import useCopy from "./Hooks/Snippet"
 import useFetch from "./Hooks/Fetch"
+import useForm from "./Hooks/Form"
 
 import "./Components/hartan.css"
 
-export { Accordion, Button, Card, Carousel, Dropdown, Footer, Form, HeroSection, Navbar, Popup, Sidemenu, Snippet, Statistics, Team, Testimonial, useCopy, useFetch }
+export { Accordion, Button, Card, Carousel, Dropdown, Footer, Form, HeroSection, Navbar, Popup, Sidemenu, Snippet, Statistics, Team, Testimonial, useCopy, useFetch, useForm }
