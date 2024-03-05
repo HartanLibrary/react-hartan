@@ -52,6 +52,7 @@
     height: 100%;
 }
 
+/* responsive design */
 @media(width<768px){
     .carousel{
         width: 40rem;

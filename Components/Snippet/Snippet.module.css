@@ -1,5 +1,8 @@
+/* Snippet Styling */
+
 @import url('https://fonts.cdnfonts.com/css/cascadia-code');
 
+/* snippet container */
 .snippet{
     background-color: rgb(30, 29, 29);
     border: .3rem solid #1e90ff;
@@ -12,6 +15,7 @@
     cursor: pointer;
 }
 
+/* container for snippet and copy/copied icon */
 .snippet pre code{
 display: flex;
 justify-content: center;
@@ -19,6 +23,7 @@ align-items: center;
 gap: 1.33rem;
 }
 
+/* snippet text styling */
 .snippetText{
     font-size: medium;
     font-family: 'Cascadia Code', sans-serif;

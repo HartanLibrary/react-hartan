@@ -18,7 +18,7 @@ const fieldsData = {
             required: true
         },
         {
-            inputType: "tel",
+            inputType: "number",
             inputId: "phoneNo",
             inputName: "phoneNo",
             inputLabel: "Contact Number",
