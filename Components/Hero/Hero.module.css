@@ -5,7 +5,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 10rem;
+    padding: 8rem;
     gap: 5rem;
 }
 
@@ -32,7 +32,6 @@
     display: flex;
     justify-content: center;
     align-items: center;
-
 }
 
 .heroImage img {
@@ -43,5 +42,6 @@
 @media (max-width: 1024px) {
     .heroSection {
         flex-direction: column;
+        padding: 4rem;
     }
 }
