@@ -1,4 +1,5 @@
 import formStyle from "./Form.module.css"
+import { useState } from "react"
 import PropTypes from "prop-types"
 
 const fieldsData = {
@@ -36,14 +37,21 @@ const fieldsData = {
 };
 
 
-export default function Form({ fields = fieldsData, formTitle = "Leave a Comment", updateData, submit, submitted, userFormCardStyle, userTitleStyle, userFormStyle, userInputFieldStyle, userSubmittedStyle, userSubmittedSVGstyle }) {
+export default function SimpleForm({ fields = fieldsData, action = "", method = "POST", formTitle = "Leave a Comment", userFormCardStyle, userTitleStyle, userFormStyle, userInputFieldStyle }) {
 
+    const [data, setData] = useState({});
+    const updateData = (e) => {
+        setData({
+            ...data,
+            [e.target.name]: e.target.value
+        })
+    };
 
     return (
         <div className={`${formStyle.formCard} ${userFormCardStyle}`}>
             <span className={`${formStyle.title} ${userTitleStyle}`}>{formTitle}</span>
 
-            <form className={`${formStyle.form} ${userFormStyle}`} onSubmit={submit}>
+            <form className={`${formStyle.form} ${userFormStyle}`} action={action} method={method} target="_blank">
 
                 {
                     fields.inputTag.map((field, id) => {
@@ -67,22 +75,13 @@ export default function Form({ fields = fieldsData, formTitle = "Leave a Comment
                     })
                 }
 
-                <button type="submit">Submit</button>
+                <button type="submit" id="btn">Submit</button>
             </form>
-
-            {
-                submitted &&
-                <div className={`${formStyle.submitted} ${userSubmittedStyle}`}>
-                    <svg className={`${formStyle.submittedSVG} ${userSubmittedSVGstyle}`} xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="100" height="100" viewBox="0 0 40 40">
-                        <path fill="#98ccfd" d="M20,38.5C9.8,38.5,1.5,30.2,1.5,20S9.8,1.5,20,1.5S38.5,9.8,38.5,20S30.2,38.5,20,38.5z"></path><path fill="none" stroke="#4788c7" strokeMiterlimit="10" d="M20,38.5C9.8,38.5,1.5,30.2,1.5,20S9.8,1.5,20,1.5S38.5,9.8,38.5,20S30.2,38.5,20,38.5z"></path><path fill="none" stroke="#fff" strokeMiterlimit="10" strokeWidth="2" d="M11,20l6,6l13-13"></path>
-                    </svg>
-                </div>
-            }
         </div>
     )
 }
 
-Form.propTypes = {
+SimpleForm.propTypes = {
     fields: PropTypes.shape({
         inputTag: PropTypes.arrayOf(PropTypes.shape({
             inputType: PropTypes.string,
@@ -98,11 +97,11 @@ Form.propTypes = {
             required: PropTypes.bool
         }))
     }),
+    action: PropTypes.string,
+    method: PropTypes.string,
     formTitle: PropTypes.string,
     userFormCardStyle: PropTypes.string,
     userTitleStyle: PropTypes.string,
     userFormStyle: PropTypes.string,
     userInputFieldStyle: PropTypes.string,
-    userSubmittedStyle: PropTypes.string,
-    userSubmittedSVGstyle: PropTypes.string
 };
