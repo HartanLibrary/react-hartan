@@ -36,14 +36,16 @@ const fieldsData = {
 };
 
 
-export default function Form({ fields = fieldsData, updateData, submit, submitted, userFormCardStyle, userTitleStyle, userFormStyle, userInputFieldStyle, userSubmittedStyle, userSubmittedSVGstyle }) {
+
+
+export default function Form({ fields = fieldsData, action = "", method = "POST", updateData, submit, submitted, userFormCardStyle, userTitleStyle, userFormStyle, userInputFieldStyle, userSubmittedStyle, userSubmittedSVGstyle }) {
 
 
     return (
         <div className={`${formStyle.formCard} ${userFormCardStyle}`}>
             <span className={`${formStyle.title} ${userTitleStyle}`}>Leave a Comment</span>
 
-            <form className={`${formStyle.form} ${userFormStyle}`} onSubmit={submit}>
+            <form className={`${formStyle.form} ${userFormStyle}`} onSubmit={submit} action={action} method={method}>
 
                 {
                     fields.inputTag.map((field, id) => {
@@ -98,6 +100,8 @@ Form.propTypes = {
             required: PropTypes.bool
         }))
     }),
+    action:PropTypes.string,
+    method:PropTypes.string,
     userFormCardStyle: PropTypes.string,
     userTitleStyle: PropTypes.string,
     userFormStyle: PropTypes.string,
