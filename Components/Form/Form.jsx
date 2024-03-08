@@ -36,7 +36,7 @@ const fieldsData = {
 };
 
 
-export default function Form({ fields = fieldsData, formTitle = "Leave a Comment", updateData, submit, submitted, userFormCardStyle, userTitleStyle, userFormStyle, userInputFieldStyle, userSubmittedStyle, userSubmittedSVGstyle }) {
+export default function Form({ fields = fieldsData, action = "", method = "POST", formTitle = "Leave a Comment", updateData, submit, submitted, userFormCardStyle, userTitleStyle, userFormStyle, userInputFieldStyle, userSubmittedStyle, userSubmittedSVGstyle }) {
 
 
     return (
@@ -98,8 +98,9 @@ Form.propTypes = {
             required: PropTypes.bool
         }))
     }),
-    action:PropTypes.string,
-    method:PropTypes.string,
+    action: PropTypes.string,
+    method: PropTypes.string,
+    formTitle:PropTypes.string,
     userFormCardStyle: PropTypes.string,
     userTitleStyle: PropTypes.string,
     userFormStyle: PropTypes.string,
