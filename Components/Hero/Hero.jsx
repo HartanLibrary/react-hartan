@@ -26,11 +26,11 @@ export default function HeroSection({ heroHeadName = "Hartan Component Library",
 }
 
 HeroSection.propTypes = {
-    heroHeadName: PropTypes.string,
-    heroAbout: PropTypes.string,
+    heroHeadName: PropTypes.node,
+    heroAbout: PropTypes.node,
     imgSrc: PropTypes.string,
     imgState: PropTypes.bool,
-    buttonText: PropTypes.string,
+    buttonText: PropTypes.node,
     onClickFunction: PropTypes.func,
     userHeroSectionStyle: PropTypes.string,
     userHeroContentStyle: PropTypes.string,

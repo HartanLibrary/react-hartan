@@ -13,7 +13,7 @@ export default function Button({ buttonText = "Hartan", userButtonStyle, onClick
 }
 
 Button.propTypes = {
-    buttonText: PropTypes.string,
+    buttonText: PropTypes.node,
     userButtonStyle: PropTypes.string,
     onClickFunction: PropTypes.func
 };

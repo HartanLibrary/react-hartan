@@ -47,8 +47,8 @@ export default function Dropdown({ listItem = list, buttonText = "Dropdown", onC
 }
 
 Dropdown.propTypes = {
-    listItem: PropTypes.arrayOf(PropTypes.string),
-    buttonText: PropTypes.string,
+    listItem: PropTypes.arrayOf(PropTypes.node),
+    buttonText: PropTypes.node,
     onClickFunction: PropTypes.func,
     userDropdownStyle: PropTypes.string,
     userButtonStyle: PropTypes.string,

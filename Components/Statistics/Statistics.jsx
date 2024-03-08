@@ -56,11 +56,11 @@ export default function Statistics({ statsBlockData = list, statisticsHeading = 
 
 Statistics.propTypes = {
     statsBlockData: PropTypes.arrayOf(PropTypes.shape({
-        head: PropTypes.string,
-        data: PropTypes.string
+        head: PropTypes.node,
+        data: PropTypes.node
     })),
-    statisticsHeading: PropTypes.string,
-    statisticsHeadingAbout: PropTypes.string,
+    statisticsHeading: PropTypes.node,
+    statisticsHeadingAbout: PropTypes.node,
     imgSrc: PropTypes.string,
     imgState: PropTypes.bool,
     userStatisticsStyle: PropTypes.string,

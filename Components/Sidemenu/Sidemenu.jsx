@@ -50,11 +50,11 @@ export default function Sidemenu({ navList = list, logoName = "Hartan", userNavb
 Sidemenu.propTypes = {
     navList: PropTypes.arrayOf(PropTypes.shape(
         {
-            logo: PropTypes.element,
-            elem: PropTypes.element
+            logo: PropTypes.node,
+            elem: PropTypes.node
         }
     )),
-    logoName: PropTypes.string,
+    logoName: PropTypes.node,
     userNavbarStyle: PropTypes.string,
     userNavToggleStyle: PropTypes.string,
     userNavHeaderStyle: PropTypes.string,

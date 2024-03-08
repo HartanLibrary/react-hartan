@@ -27,9 +27,9 @@ export default function Card({ buttonText = "Card Button", onClickFunction, user
 }
 
 Card.propTypes = {
-    contentHeading: PropTypes.string,
-    contentPara: PropTypes.string,
-    buttonText: PropTypes.string,
+    contentHeading: PropTypes.node,
+    contentPara: PropTypes.node,
+    buttonText: PropTypes.node,
     userButtonStyle: PropTypes.string,
     onClickFunction: PropTypes.func,
     imgSrc: PropTypes.string,
