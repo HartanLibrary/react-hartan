@@ -84,8 +84,8 @@ Team.propTypes = {
         memberName: PropTypes.string,
         memberPosition: PropTypes.string
     })),
-    teamSectionHeading: PropTypes.string,
-    teamSectionContent: PropTypes.string,
+    teamSectionHeading: PropTypes.node,
+    teamSectionContent: PropTypes.node,
     userTeamStyle: PropTypes.string,
     userTeamDetailsCaptionStyle: PropTypes.string,
     userTeamMembersStyle: PropTypes.string,

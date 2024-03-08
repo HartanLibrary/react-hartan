@@ -32,12 +32,12 @@ export default function Popup({ buttonText = "Popup", userButtonStyle, onClickFu
 }
 
 Popup.propTypes = {
-    buttonText: PropTypes.string,
+    buttonText: PropTypes.node,
     userButtonStyle: PropTypes.string,
     onClickFunction: PropTypes.func,
-    popupContentBoxMaterialHeading: PropTypes.string,
-    popupContentBoxMaterialPara: PropTypes.string,
-    popupContentBoxMaterialButtonText: PropTypes.string,
+    popupContentBoxMaterialHeading: PropTypes.node,
+    popupContentBoxMaterialPara: PropTypes.node,
+    popupContentBoxMaterialButtonText: PropTypes.node,
     userPopupStyle: PropTypes.string,
     userPopupContentStyle: PropTypes.string,
     userPopupContentBoxStyle: PropTypes.string,

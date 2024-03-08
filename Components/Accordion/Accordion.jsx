@@ -47,8 +47,8 @@ export default function Accordion({ accordionList = list, userAccordionStyle, us
 
 Accordion.propTypes = {
     accordionList: PropTypes.arrayOf(PropTypes.shape({
-        question: PropTypes.string,
-        answer: PropTypes.string
+        question: PropTypes.node,
+        answer: PropTypes.node
     })),
     userAccordionStyle: PropTypes.string,
     userAccordionBoxStyle: PropTypes.string,

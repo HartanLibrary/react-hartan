@@ -98,8 +98,8 @@ Navbar.propTypes = {
         elem: PropTypes.element
     })),
     logoImgSrc: PropTypes.string,
-    logoName: PropTypes.string,
-    buttonText: PropTypes.string,
+    logoName: PropTypes.node,
+    buttonText: PropTypes.node,
     onClickFunction: PropTypes.func,
     statesObj: PropTypes.shape({
         logo: PropTypes.shape({

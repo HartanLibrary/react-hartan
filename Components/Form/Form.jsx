@@ -36,14 +36,12 @@ const fieldsData = {
 };
 
 
-
-
-export default function Form({ fields = fieldsData, action = "", method = "POST", updateData, submit, submitted, userFormCardStyle, userTitleStyle, userFormStyle, userInputFieldStyle, userSubmittedStyle, userSubmittedSVGstyle }) {
+export default function Form({ fields = fieldsData, formTitle = "Leave a Comment", updateData, submit, submitted, userFormCardStyle, userTitleStyle, userFormStyle, userInputFieldStyle, userSubmittedStyle, userSubmittedSVGstyle }) {
 
 
     return (
         <div className={`${formStyle.formCard} ${userFormCardStyle}`}>
-            <span className={`${formStyle.title} ${userTitleStyle}`}>Leave a Comment</span>
+            <span className={`${formStyle.title} ${userTitleStyle}`}>{formTitle}</span>
 
             <form className={`${formStyle.form} ${userFormStyle}`} onSubmit={submit} action={action} method={method}>
 

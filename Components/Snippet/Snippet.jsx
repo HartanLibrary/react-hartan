@@ -30,9 +30,9 @@ export default function Snippet({ snippetSymbol = "$", snippetSymbolState = true
 }
 
 Snippet.propTypes = {
-    snippetSymbol: PropTypes.string,
+    snippetSymbol: PropTypes.node,
     snippetSymbolState: PropTypes.bool,
-    snippetText: PropTypes.string,
+    snippetText: PropTypes.node,
     userSnippetStyle: PropTypes.string,
     userSnippetTextStyle: PropTypes.string
 };

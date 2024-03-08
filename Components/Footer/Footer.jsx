@@ -76,7 +76,7 @@ export default function Footer({ footerList = footerLinksArray, copyrightYear = 
       </div>
 
       <div className={`${footerStyles.copyright} ${userCopyrightStyle}`}>
-        <p className={``}>
+        <p>
           Copyright © {copyrightYear} {copyrightName} — All rights reserved by
           <strong> {copyrightName} </strong>
         </p>
@@ -88,9 +88,9 @@ export default function Footer({ footerList = footerLinksArray, copyrightYear = 
 
 Footer.propTypes = {
   footerList: PropTypes.arrayOf(PropTypes.shape({
-    footerLinkHeading: PropTypes.string,
+    footerLinkHeading: PropTypes.node,
     footerLinks: PropTypes.arrayOf(PropTypes.shape({
-      footerLinkName: PropTypes.string,
+      footerLinkName: PropTypes.node,
       footerLinksrc: PropTypes.string
     }))
   })),
