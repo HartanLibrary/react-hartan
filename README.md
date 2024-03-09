@@ -1,6 +1,6 @@
 
 <p align="center">
-  <a href="">
+  <a href="https://hartan.netlify.app">
     <img src="images/hartan.png" alt="Hartan Logo" width="150" height="165">
   </a>
 </p>
@@ -10,14 +10,14 @@
 <p align="center">
   An intuitive and customizable front-end UI Component Library for faster and easier web development.
   <br>
-  <a href=""><strong>Explore Hartan Docs »</strong></a>
+  <a href="https://hartans-organization.gitbook.io/hartan-docs/"><strong>Explore Hartan Docs »</strong></a>
   <br>
   <br>
   <a href="https://github.com/akkshayTandon/react-hartan/issues">Report bug</a>
   ·
   <a href="https://github.com/akkshayTandon/react-hartan/issues">Request feature</a>
   ·
-  <a href="">Blog</a>
+  <a href="https://hartan.netlify.app/preview/blogs">Blog</a>
 </p>
 
 
@@ -53,21 +53,21 @@ Install with yarn
     
 ## Documentation
 
-Visit the [Hartan Docs]() to for detailed explanations and usage.
+Visit the [Hartan Docs](https://hartans-organization.gitbook.io/hartan-docs/) to for detailed explanations and usage.
 
 
 ## Contributing
 
 Contributions are always welcome!
 
-See [`contributing.md`]() for ways to get started.
+See [`contributing.md`](https://hartans-organization.gitbook.io/hartan-docs/contributing.md) for ways to get started.
 
 Please adhere to this project's [`code of conduct`](/CODE_OF_CONDUCT.md).
 
 
 ## Demo
 
-Insert gif or link to demo (sample website link goes here)
+Try the components [here](https://hartan.netlify.app/preview).
 
 
 ## Components Screenshots
