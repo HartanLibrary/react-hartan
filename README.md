@@ -13,9 +13,9 @@
   <a href=""><strong>Explore Hartan Docs »</strong></a>
   <br>
   <br>
-  <a href="">Report bug</a>
+  <a href="https://github.com/akkshayTandon/react-hartan/issues">Report bug</a>
   ·
-  <a href="">Request feature</a>
+  <a href="https://github.com/akkshayTandon/react-hartan/issues">Request feature</a>
   ·
   <a href="">Blog</a>
 </p>
@@ -43,6 +43,12 @@ Install with npm
 
 ```bash
   npm install react-hartan
+```
+
+Install with yarn
+
+```bash
+  yarn add react-hartan
 ```
     
 ## Documentation

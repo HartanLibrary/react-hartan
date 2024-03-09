@@ -99,5 +99,6 @@ Footer.propTypes = {
   userFooterStyle: PropTypes.string,
   userLinksStyle: PropTypes.string,
   userFooterLinksStyle: PropTypes.string,
+  userLinksDataStyle: PropTypes.string,
   userCopyrightStyle: PropTypes.string
 };
