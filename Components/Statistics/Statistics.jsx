@@ -20,10 +20,10 @@ const list = [
     },
 ];
 
-export default function Statistics({ statsBlockData = list, statisticsHeading = "Hartan", statisticsHeadingAbout = "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Praesentium libero architecto ipsum nostrum impedit similique neque mollitia dolores quasi autem cum ea, quas aspernatur? Deserunt.", imgSrc = "https://dummyimage.com/500x250", imgState = true, imgAlt = "Hartan", userStatisticsStyle, userStatsContentStyle, userStatsBlocksStyle }) {
+export default function Statistics({ statsBlockData = list, statisticsHeading = "Hartan", statisticsHeadingAbout = "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Praesentium libero architecto ipsum nostrum impedit similique neque mollitia dolores quasi autem cum ea, quas aspernatur? Deserunt.", imgSrc = "https://dummyimage.com/500x250", imgState = true, imgAlt = "Hartan", id, userStatisticsStyle, userStatsContentStyle, userStatsBlocksStyle }) {
 
     return (
-        <section className={`${statisticsStyle.statistics} ${userStatisticsStyle}`}>
+        <section className={`${statisticsStyle.statistics} ${userStatisticsStyle}`} id={id}>
             <div className={`${statisticsStyle.abtStats} ${userStatsContentStyle}`}>
                 <div>
                     <h1>{statisticsHeading}</h1>
@@ -64,6 +64,7 @@ Statistics.propTypes = {
     imgSrc: PropTypes.string,
     imgState: PropTypes.bool,
     imgAlt: PropTypes.string,
+    id: PropTypes.string,
     userStatisticsStyle: PropTypes.string,
     userStatsContentStyle: PropTypes.string,
     userStatsBlocksStyle: PropTypes.string

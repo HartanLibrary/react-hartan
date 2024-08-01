@@ -15,7 +15,7 @@ import Statistics from "./Components/Statistics/Statistics"
 import Team from "./Components/Team/Team"
 import Testimonial from "./Components/Testimonial/Testimonial"
 
-import useCopy from "./Hooks/Snippet"
+import useCopy from "./Hooks/Copy"
 import useFetch from "./Hooks/Fetch"
 import useForm from "./Hooks/Form"
 

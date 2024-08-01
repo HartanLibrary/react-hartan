@@ -37,7 +37,7 @@ const fieldsData = {
 };
 
 
-export default function SimpleForm({ fields = fieldsData, action = "", method = "POST", formTitle = "Leave a Comment", userFormCardStyle, userTitleStyle, userFormStyle, userInputFieldStyle }) {
+export default function SimpleForm({ fields = fieldsData, action = "", method = "POST", formTitle = "Leave a Comment", id, userFormCardStyle, userTitleStyle, userFormStyle, userInputFieldStyle }) {
 
     const [data, setData] = useState({});
     const updateData = (e) => {
@@ -48,7 +48,7 @@ export default function SimpleForm({ fields = fieldsData, action = "", method = 
     };
 
     return (
-        <div className={`${formStyle.formCard} ${userFormCardStyle}`}>
+        <div className={`${formStyle.formCard} ${userFormCardStyle}`} id={id}>
             <span className={`${formStyle.title} ${userTitleStyle}`}>{formTitle}</span>
 
             <form className={`${formStyle.form} ${userFormStyle}`} action={action} method={method} target="_blank">
@@ -100,6 +100,7 @@ SimpleForm.propTypes = {
     action: PropTypes.string,
     method: PropTypes.string,
     formTitle: PropTypes.string,
+    id: PropTypes.string,
     userFormCardStyle: PropTypes.string,
     userTitleStyle: PropTypes.string,
     userFormStyle: PropTypes.string,

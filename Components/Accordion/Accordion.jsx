@@ -21,12 +21,12 @@ const list = [
     },
 ];
 
-export default function Accordion({ accordionList = list, userAccordionStyle, userAccordionBoxStyle, userAccordionTitleStyle, userAccordionQuesStyle, userAccordionSignStyle, userAccordionContentShowStyle, userAccordionContentHideStyle }) {
+export default function Accordion({ accordionList = list, id, userAccordionStyle, userAccordionBoxStyle, userAccordionTitleStyle, userAccordionQuesStyle, userAccordionSignStyle, userAccordionContentShowStyle, userAccordionContentHideStyle }) {
 
     const [openAccordion, toggle] = useAccordion(null);
 
     return (
-        <section className={`${userAccordionStyle}`}>
+        <section className={`${userAccordionStyle}`} id={id}>
             {
                 accordionList.map((data, id) => {
                     return (
@@ -50,6 +50,7 @@ Accordion.propTypes = {
         question: PropTypes.node,
         answer: PropTypes.node
     })),
+    id: PropTypes.string,
     userAccordionStyle: PropTypes.string,
     userAccordionBoxStyle: PropTypes.string,
     userAccordionTitleStyle: PropTypes.string,

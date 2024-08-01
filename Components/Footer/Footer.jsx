@@ -47,10 +47,10 @@ export const footerLinksArray = [
   }
 ];
 
-export default function Footer({ footerList = footerLinksArray, copyrightYear = "2024", copyrightName = "Hartan Library", userFooterStyle, userLinksStyle, userFooterLinksStyle, userLinksDataStyle, userCopyrightStyle }) {
+export default function Footer({ footerList = footerLinksArray, copyrightYear = "2024", copyrightName = "Hartan Library", id, userFooterStyle, userLinksStyle, userFooterLinksStyle, userLinksDataStyle, userCopyrightStyle }) {
 
   return (
-    <footer id="" className={`${userFooterStyle}`}>
+    <footer className={`${userFooterStyle}`} id={id}>
 
       <div className={`${footerStyles.links} ${userLinksStyle}`}>
         {footerList.map((footerLink, id) => {
@@ -96,6 +96,7 @@ Footer.propTypes = {
   })),
   copyrightYear: PropTypes.string,
   copyrightName: PropTypes.string,
+  id: PropTypes.string,
   userFooterStyle: PropTypes.string,
   userLinksStyle: PropTypes.string,
   userFooterLinksStyle: PropTypes.string,

@@ -5,12 +5,12 @@ import PropTypes from "prop-types"
 
 const material = "Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta sapiente, molestiae earum non, vel quo delectus, aliquid nostrum officia alias voluptates! Itaque ratione exercitationem nostrum, molestiae illo, fugit laudantium perspiciatis maiores tempora provident nihil praesentium dignissimos amet illum accusamus natus rerum quam assumenda fuga ipsum dolorem ducimus animi. Eos, dolores!";
 
-export default function Popup({ buttonText = "Popup", userButtonStyle, onClickFunction, popupContentBoxMaterialHeading = "This is a Popup", popupContentBoxMaterialPara = material, popupContentBoxMaterialButtonText = "Download", userPopupStyle, userPopupContentStyle, userPopupContentBoxStyle, userPopupContentBoxMaterialStyle, userCancelButtonStyle, userButtonStyleInsidePopup }) {
+export default function Popup({ buttonText = "Popup", userButtonStyle, onClickFunction, popupContentBoxMaterialHeading = "This is a Popup", popupContentBoxMaterialPara = material, popupContentBoxMaterialButtonText = "Download", id, userPopupStyle, userPopupContentStyle, userPopupContentBoxStyle, userPopupContentBoxMaterialStyle, userCancelButtonStyle, userButtonStyleInsidePopup }) {
 
     const [showPopup, popupRef, popupState, closePopup] = usePopup(false);
 
     return (
-        <section className={`${userPopupStyle}`}>
+        <section className={`${userPopupStyle}`} id={id}>
             <Button userButtonStyle={userButtonStyle} buttonText={buttonText} onClickFunction={() => popupState(true)} />
             {
                 showPopup &&
@@ -38,6 +38,7 @@ Popup.propTypes = {
     popupContentBoxMaterialHeading: PropTypes.node,
     popupContentBoxMaterialPara: PropTypes.node,
     popupContentBoxMaterialButtonText: PropTypes.node,
+    id: PropTypes.string,
     userPopupStyle: PropTypes.string,
     userPopupContentStyle: PropTypes.string,
     userPopupContentBoxStyle: PropTypes.string,

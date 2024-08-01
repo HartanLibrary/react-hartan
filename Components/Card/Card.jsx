@@ -4,10 +4,10 @@ import PropTypes from "prop-types"
 
 const para = "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Officia architecto minima reprehenderit? Iure eaque nostrum, blanditiis in quos, natus, ea nobis beatae distinctio dicta earum!"
 
-export default function Card({ buttonText = "Card Button", onClickFunction, userButtonStyle, imgSrc = "https://dummyimage.com/720x400", imgState = true, imgAlt = "Hartan", contentHeading = "Hartan", contentPara = para, userCardStyle, userContentStyle }) {
+export default function Card({ buttonText = "Card Button", id, onClickFunction, userButtonStyle, imgSrc = "https://dummyimage.com/720x400", imgState = true, imgAlt = "Hartan", contentHeading = "Hartan", contentPara = para, userCardStyle, userContentStyle }) {
 
     return (
-        <section className={`${cardStyle.cardSection} ${userCardStyle}`}>
+        <section className={`${cardStyle.cardSection} ${userCardStyle}`} id={id}>
             {
                 imgState &&
                 <figure>
@@ -30,6 +30,7 @@ Card.propTypes = {
     contentHeading: PropTypes.node,
     contentPara: PropTypes.node,
     buttonText: PropTypes.node,
+    id: PropTypes.string,
     userButtonStyle: PropTypes.string,
     onClickFunction: PropTypes.func,
     imgSrc: PropTypes.string,

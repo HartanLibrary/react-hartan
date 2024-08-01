@@ -1,15 +1,15 @@
 import snippetStyle from "./Snippet.module.css"
-import useCopy from "../../Hooks/Snippet"
+import useCopy from "../../Hooks/Copy"
 import PropTypes from "prop-types"
 
 
-export default function Snippet({ snippetSymbol = "$", snippetSymbolState = true, snippetText = "npm i react-hartan", userSnippetStyle, userSnippetTextStyle }) {
+export default function Snippet({ snippetSymbol = "$", snippetSymbolState = true, snippetText = "npm i react-hartan", id, userSnippetStyle, userSnippetTextStyle }) {
 
     const [isCopied, handleCopyClick] = useCopy(snippetText);
 
     return (
 
-        <div className={`${snippetStyle.snippet} ${userSnippetStyle}`} onClick={handleCopyClick}>
+        <div className={`${snippetStyle.snippet} ${userSnippetStyle}`} onClick={handleCopyClick} id={id}>
             <pre>
                 <code>
                     <span className={`${snippetStyle.snippetText} ${userSnippetTextStyle}`}>{snippetSymbolState && snippetSymbol} {snippetText}</span>
@@ -33,6 +33,7 @@ Snippet.propTypes = {
     snippetSymbol: PropTypes.node,
     snippetSymbolState: PropTypes.bool,
     snippetText: PropTypes.node,
+    id: PropTypes.string,
     userSnippetStyle: PropTypes.string,
     userSnippetTextStyle: PropTypes.string
 };

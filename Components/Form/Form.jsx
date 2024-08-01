@@ -36,11 +36,11 @@ const fieldsData = {
 };
 
 
-export default function Form({ fields = fieldsData, formTitle = "Leave a Comment", updateData, submit, submitted, userFormCardStyle, userTitleStyle, userFormStyle, userInputFieldStyle, userSubmittedStyle, userSubmittedSVGstyle }) {
+export default function Form({ fields = fieldsData, formTitle = "Leave a Comment", id, updateData, submit, submitted, userFormCardStyle, userTitleStyle, userFormStyle, userInputFieldStyle, userSubmittedStyle, userSubmittedSVGstyle }) {
 
 
     return (
-        <div className={`${formStyle.formCard} ${userFormCardStyle}`}>
+        <div className={`${formStyle.formCard} ${userFormCardStyle}`} id={id}>
             <span className={`${formStyle.title} ${userTitleStyle}`}>{formTitle}</span>
 
             <form className={`${formStyle.form} ${userFormStyle}`} onSubmit={submit}>
@@ -99,6 +99,7 @@ Form.propTypes = {
         }))
     }),
     formTitle: PropTypes.string,
+    id: PropTypes.string,
     userFormCardStyle: PropTypes.string,
     userTitleStyle: PropTypes.string,
     userFormStyle: PropTypes.string,

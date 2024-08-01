@@ -13,12 +13,12 @@ function onClickItem(val){
     console.log(val);
 }
 
-export default function Dropdown({ listItem = list, buttonText = "Dropdown", onClickFunction = onClickItem, userDropdownStyle, userDropdownListStyle, userDropdownListItemStyle, userButtonStyle }) {
+export default function Dropdown({ listItem = list, buttonText = "Dropdown", id, onClickFunction = onClickItem, userDropdownStyle, userDropdownListStyle, userDropdownListItemStyle, userButtonStyle }) {
 
     const [isOpen, setIsOpen, handleDropdownButtonClick, dropdownText] = useDropdown(buttonText, onClickFunction);
 
     return (
-        <section className={`${dropdownStyle.dropdown} ${userDropdownStyle}`}>
+        <section className={`${dropdownStyle.dropdown} ${userDropdownStyle}`} id={id}>
             <button className={`${dropdownStyle.dropdownBtn} ${userButtonStyle}`} onClick={() => setIsOpen(!isOpen)}>{dropdownText}
                 {
                     isOpen ? (
@@ -50,6 +50,7 @@ Dropdown.propTypes = {
     listItem: PropTypes.arrayOf(PropTypes.node),
     buttonText: PropTypes.node,
     onClickFunction: PropTypes.func,
+    id: PropTypes.string,
     userDropdownStyle: PropTypes.string,
     userButtonStyle: PropTypes.string,
     userDropdownList: PropTypes.string,

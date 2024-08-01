@@ -44,10 +44,10 @@ const list = [
     }
 ];
 
-export default function Team({ memberList = list, teamSectionHeading = "Our Team", teamSectionContent = "Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut dicta molestias, ad delectus qui corrupti aliquid minus a quo ipsa cumque aspernatur, veritatis dolorum ipsam!", imgState = true, userTeamStyle, userTeamDetailsCaptionStyle, userTeamMembersStyle, userTeamMemberCardStyle, userTeamMemberNameStyle, userTeamMemberPositionStyle }) {
+export default function Team({ memberList = list, teamSectionHeading = "Our Team", teamSectionContent = "Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut dicta molestias, ad delectus qui corrupti aliquid minus a quo ipsa cumque aspernatur, veritatis dolorum ipsam!", imgState = true, id, userTeamStyle, userTeamDetailsCaptionStyle, userTeamMembersStyle, userTeamMemberCardStyle, userTeamMemberNameStyle, userTeamMemberPositionStyle }) {
 
     return (
-        <section className={`${teamStyle.team} ${userTeamStyle}`}>
+        <section className={`${teamStyle.team} ${userTeamStyle}`} id={id}>
             <div className={`${teamStyle.teamDetailsCaption} ${userTeamDetailsCaptionStyle}`}>
                 <h1>{teamSectionHeading}</h1>
                 <p>{teamSectionContent}</p>
@@ -86,6 +86,7 @@ Team.propTypes = {
     })),
     teamSectionHeading: PropTypes.node,
     teamSectionContent: PropTypes.node,
+    id: PropTypes.string,
     userTeamStyle: PropTypes.string,
     userTeamDetailsCaptionStyle: PropTypes.string,
     userTeamMembersStyle: PropTypes.string,

@@ -20,10 +20,10 @@ const list = [
     },
 ];
 
-export default function Sidemenu({ navList = list, logoName = "Hartan", userNavbarStyle, userNavToggleStyle, userNavHeaderStyle, userNavTitleStyle, userNavContentStyle, userNavButtonStyle }) {
+export default function Sidemenu({ navList = list, logoName = "Hartan", id, userNavbarStyle, userNavToggleStyle, userNavHeaderStyle, userNavTitleStyle, userNavContentStyle, userNavButtonStyle }) {
 
     return (
-        <div className={`${sidemenuStyle.navBar} ${userNavbarStyle}`}>
+        <div className={`${sidemenuStyle.navBar} ${userNavbarStyle}`} id={id}>
             <input id="navToggle" className={`${sidemenuStyle.navToggle} ${userNavToggleStyle}`} type="checkbox" />
             <div className={`${sidemenuStyle.navHeader} ${userNavHeaderStyle}`}>
                 <span id={`${sidemenuStyle.navTitle}`} className={`${sidemenuStyle.navTitle} ${userNavTitleStyle}`}>{logoName}</span>
@@ -55,6 +55,7 @@ Sidemenu.propTypes = {
         }
     )),
     logoName: PropTypes.node,
+    id: PropTypes.string,
     userNavbarStyle: PropTypes.string,
     userNavToggleStyle: PropTypes.string,
     userNavHeaderStyle: PropTypes.string,
