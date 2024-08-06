@@ -21,7 +21,12 @@ const list = [
     },
 ];
 
-export default function Accordion({ accordionList = list, id, userAccordionStyle, userAccordionBoxStyle, userAccordionTitleStyle, userAccordionQuesStyle, userAccordionSignStyle, userAccordionContentShowStyle, userAccordionContentHideStyle }) {
+const symbolButtons = {
+    openSymbol: "+",
+    closeSymbol: "-"
+};
+
+export default function Accordion({ accordionList = list, symbols = symbolButtons, id, userAccordionStyle, userAccordionBoxStyle, userAccordionTitleStyle, userAccordionQuesStyle, userAccordionSignStyle, userAccordionContentShowStyle, userAccordionContentHideStyle }) {
 
     const [openAccordion, toggle] = useAccordion(null);
 
@@ -34,7 +39,7 @@ export default function Accordion({ accordionList = list, id, userAccordionStyle
                             <div className={`${accordionStyle.accordionTitle} ${userAccordionTitleStyle}`}
                                 onClick={() => toggle(id)} >
                                 <span className={`${accordionStyle.accordionQues} ${userAccordionQuesStyle}`}>{data.question}</span>
-                                <span className={`${accordionStyle.accordionSign} ${userAccordionSignStyle}`}>{openAccordion == id ? "-" : "+"}</span>
+                                <span className={`${accordionStyle.accordionSign} ${userAccordionSignStyle}`}>{openAccordion == id ? symbols.closeSymbol : symbols.openSymbol}</span>
                             </div>
                             <div className={openAccordion == id ? `${accordionStyle.accordionContentHide} ${accordionStyle.accordionContentShow} ${userAccordionContentShowStyle}` : `${accordionStyle.accordionContentHide} ${userAccordionContentHideStyle}`}>{data.answer}</div>
                         </div>
