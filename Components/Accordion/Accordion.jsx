@@ -55,6 +55,10 @@ Accordion.propTypes = {
         question: PropTypes.node,
         answer: PropTypes.node
     })),
+    symbols: PropTypes.shape({
+        openSymbol: PropTypes.string,
+        closeSymbol: PropTypes.string
+    }),
     id: PropTypes.string,
     userAccordionStyle: PropTypes.string,
     userAccordionBoxStyle: PropTypes.string,
