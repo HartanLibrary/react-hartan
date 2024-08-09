@@ -5,7 +5,7 @@ import PropTypes from "prop-types"
 const about = "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dicta placeat labore cupiditate laudantium atque totam architecto, aliquid, dolores numquam vel odit voluptates beatae quo voluptatum autem voluptate eos facilis tempora culpa, perferendis explicabo minima sunt unde? Natus tempora consectetur unde.";
 
 
-export default function HeroSection({ heroHeadName = "Hartan Component Library", heroAbout = about, imgSrc = "https://dummyimage.com/720x600", imgState = true, imgAlt = "Hartan", buttonText = "Button", id, onClickFunction, userHeroSectionStyle, userHeroContentStyle, userButtonStyle }) {
+export default function HeroSection({ heroHeadName = "Hartan Component Library", heroAbout = about, imgSrc = "https://dummyimage.com/720x600", imgState = true, imgAlt = "Hartan", buttonText = "Button", id, imgLoad, onClickFunction, userHeroSectionStyle, userHeroContentStyle, userButtonStyle }) {
 
     return (
         <section className={`${heroSectionStyles.heroSection} ${userHeroSectionStyle}`} id={id}>
@@ -18,7 +18,7 @@ export default function HeroSection({ heroHeadName = "Hartan Component Library",
             {
                 imgState &&
                 <figure className={`${heroSectionStyles.heroImage}`}>
-                    <img src={imgSrc} alt={imgAlt} />
+                    <img src={imgSrc} alt={imgAlt} loading={imgLoad}/>
                 </figure>
             }
         </section>

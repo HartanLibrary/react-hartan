@@ -44,7 +44,7 @@ const list = [
     }
 ];
 
-export default function Team({ memberList = list, teamSectionHeading = "Our Team", teamSectionContent = "Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut dicta molestias, ad delectus qui corrupti aliquid minus a quo ipsa cumque aspernatur, veritatis dolorum ipsam!", imgState = true, id, userTeamStyle, userTeamDetailsCaptionStyle, userTeamMembersStyle, userTeamMemberCardStyle, userTeamMemberNameStyle, userTeamMemberPositionStyle }) {
+export default function Team({ memberList = list, teamSectionHeading = "Our Team", teamSectionContent = "Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut dicta molestias, ad delectus qui corrupti aliquid minus a quo ipsa cumque aspernatur, veritatis dolorum ipsam!", imgState = true, id, imgLoad, userTeamStyle, userTeamDetailsCaptionStyle, userTeamMembersStyle, userTeamMemberCardStyle, userTeamMemberNameStyle, userTeamMemberPositionStyle }) {
 
     return (
         <section className={`${teamStyle.team} ${userTeamStyle}`} id={id}>
@@ -61,7 +61,7 @@ export default function Team({ memberList = list, teamSectionHeading = "Our Team
                                 {
                                     imgState &&
                                     <figure>
-                                        <img src={member.memberImg} alt={member.memberName} />
+                                        <img src={member.memberImg} alt={member.memberName} loading={imgLoad}/>
                                     </figure>
                                 }
                                 

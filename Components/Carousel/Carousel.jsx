@@ -10,7 +10,7 @@ const imageList = [
     "https://dummyimage.com/605x300",
 ];
 
-export default function Carousel({ images = imageList, id, userCarouselStyle, userImagesStyle }) {
+export default function Carousel({ images = imageList, id, imgLoad, userCarouselStyle, userImagesStyle }) {
 
     const [currentSlide, handleLeftArrow, handleRightArrow] = useCarousel(0, images.length);
 
@@ -25,7 +25,7 @@ export default function Carousel({ images = imageList, id, userCarouselStyle, us
                     images.map((image, index) => {
                         return (
                             <figure key={index} className={`${carouselStyle.slides}`} style={{ display: currentSlide === index ? "block" : "none" }}>
-                                <img src={image} alt={`Slide ${index + 1}`} />
+                                <img src={image} alt={`Slide ${index + 1}`} loading={imgLoad}/>
                             </figure>
                         )
                     })

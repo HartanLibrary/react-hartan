@@ -28,7 +28,7 @@ const states = {
     buttonState: true,
 };
 
-export default function Navbar({ navList = list, statesObj = states, onClickFunction, buttonText = "Light / Dark", logoImgSrc = "https://dummyimage.com/374x416", logoName = "Hartan", id, userHeaderStyle, userSideBarStyle, userNavListStyle, userNavListItemStyle, userLogoStyle, userButtonStyle, userNavButtonSvgColor }) {
+export default function Navbar({ navList = list, statesObj = states, onClickFunction, buttonText = "Light / Dark", logoImgSrc = "https://dummyimage.com/374x416", logoName = "Hartan", id, imgLoad, userHeaderStyle, userSideBarStyle, userNavListStyle, userNavListItemStyle, userLogoStyle, userButtonStyle, userNavButtonSvgColor }) {
 
     const [sidebarStatus, openSidebar, closeSidebar] = useSidebar(false);
 
@@ -41,7 +41,7 @@ export default function Navbar({ navList = list, statesObj = states, onClickFunc
             {
                 statesObj.logo.full && (
                     <div className={`${navbarStyles.logo} ${userLogoStyle}`}>
-                        {statesObj.logo.img && <img src={logoImgSrc} alt="hartan-logo" />}
+                        {statesObj.logo.img && <img src={logoImgSrc} alt="hartan-logo" loading={imgLoad}/>}
                         {statesObj.logo.name && <span>{logoName}</span>}
                     </div>
                 )
