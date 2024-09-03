@@ -10,14 +10,14 @@
 <p align="center">
   An intuitive and customizable front-end UI Component Library for faster and easier web development.
   <br>
-  <a href="https://hartans-organization.gitbook.io/hartan-docs/"><strong>Explore Hartan Docs »</strong></a>
+  <a href="https://github.com/HartanLibrary/react-hartan"><strong>Explore Hartan Docs »</strong></a>
   <br>
   <br>
-  <a href="https://github.com/akkshayTandon/react-hartan/issues">Report bug</a>
+  <a href="https://github.com/HartanLibrary/react-hartan/issues">Report bug</a>
   ·
-  <a href="https://github.com/akkshayTandon/react-hartan/issues">Request feature</a>
+  <a href="https://github.com/HartanLibrary/react-hartan/issues">Request feature</a>
   ·
-  <a href="https://hartan.netlify.app/preview/blogs">Blog</a>
+  <a href="https://hartan.netlify.app/blogs">Blog</a>
 </p>
 
 
