@@ -1,6 +1,6 @@
 {
   "name": "react-hartan",
-  "version": "1.3.5",
+  "version": "1.3.6",
   "description": "A simple components library for React",
   "main": "index.js",
   "scripts": {
@@ -24,7 +24,9 @@
   "author": "Akkshay Tandon & Hardik Singh",
   "license": "MIT License",
   "dependencies": {
-    "prop-types": "^15.8.1",
-    "react": "^18.2.0"
+    "prop-types": "^15.8.1"
+  },
+  "peerDependencies": {
+    "react": ">=18.0.0"
   }
 }
